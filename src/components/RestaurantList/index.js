@@ -18,7 +18,7 @@ const RestaurantList = () => {
               Cidade
               Email
               Nome_do_Estabelecimento
-              Doa__es
+              # Doa__es
               Categoria
               Como_Pedir
               Servi_os
@@ -47,7 +47,7 @@ const RestaurantList = () => {
     <div>
       {restaurants.length} lugares que não vamos deixar fechar
       {
-        restaurants.map( restaurant => {          
+        restaurants.map(restaurant => {
           const { id, data } = restaurant.node;
 
           return (

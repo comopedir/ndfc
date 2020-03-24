@@ -9,6 +9,7 @@ module.exports = {
     author: `@naodeixefecharaconta`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -50,8 +51,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-          bucketName: 'site.naodeixefecharaconta.com'
+        bucketName: 'site.naodeixefecharaconta.com'
       },
-  },
+    },
   ],
 }
