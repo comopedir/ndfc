@@ -2,7 +2,7 @@
   Não deixe fechar a conta
 </h1>
 
-NDFC is a website generator based in Gatsby + a simple Airtable integration to raise
+NDFC is a simple Gatsby + a simple Airtable integration to raise
 awareness about restaurants in Brazil being affected by COVID-19. A fast non-profit
 response made by food lovers, open to volunteers.
 
@@ -12,6 +12,12 @@ response made by food lovers, open to volunteers.
 
     ```shell
     gatsby develop
+    ```
+
+    Optionally, use the option -H with the ip to test with mobile devices.
+
+    ```shell
+    gatsby develop -H 0.0.0.0
     ```
 
 ## 🧐 What's inside?
