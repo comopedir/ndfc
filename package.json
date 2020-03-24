@@ -13,6 +13,7 @@
     "gatsby-plugin-mdx": "^1.1.1",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-s3": "^0.3.3",
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-source-airtable": "^2.1.0",
     "gatsby-source-filesystem": "^2.1.56",
@@ -36,7 +37,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby-plugin-s3 deploy"
   },
   "repository": {
     "type": "git",
