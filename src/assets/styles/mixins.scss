@@ -1,0 +1,50 @@
+@mixin fromLarge {
+  @media only screen and (min-width: $bp-large) {
+    @content;
+  }
+}
+
+/* Grid System */
+@mixin grid(
+  $columns-mobile: $grid-columns-mobile,
+  $columns-desktop: $grid-columns-desktop
+) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: unquote(repeater("1fr ", $columns-mobile));
+  grid-gap: $grid-gap-mobile;
+  grid-template-columns: repeat($columns-mobile, 1fr);
+  position: relative;
+  width: 100%;
+
+  @include fromLarge {
+    -ms-grid-columns: unquote(repeater("1fr ", $columns-desktop));
+    grid-gap: $grid-gap-desktop;
+    grid-template-columns: repeat($columns-desktop, 1fr);
+    width: 100%;
+  }
+}
+
+@mixin grid-column-span($cols) {
+  grid-column-end: span $cols;
+  -ms-grid-column-span: $cols;
+}
+
+@mixin grid-row-span($rows) {
+  grid-row-end: span $rows;
+  -ms-grid-rows-span: $rows;
+}
+
+@mixin grid-column-start($cols) {
+  -ms-grid-column: $cols;
+  grid-column-start: $cols;
+}
+
+@mixin grid-row-start($rows) {
+  -ms-grid-row: $rows;
+  grid-row-start: $rows;
+}
+
+@function grid-custom-column($cols, $grid-columns: $grid-columns-mobile) {
+  @return calc(100vw / #{$grid-columns} * #{$cols});
+}

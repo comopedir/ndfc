@@ -9,18 +9,12 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import 'normalize.css'
-import "./layout.scss"
+import "./../assets/styles/main.scss"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className="grid">
         <main>{children}</main>
         <footer></footer>
       </div>
