@@ -46,5 +46,18 @@
 }
 
 @function grid-custom-column($cols, $grid-columns: $grid-columns-mobile) {
-  @return calc(100vw / #{$grid-columns} * #{$cols});
+  $multiplier: $cols / $grid-columns;
+  @return calc(
+    100% * #{$multiplier} - #{$grid-gap-mobile} * (1 - #{$multiplier})
+  );
+}
+
+@function grid-custom-column-desktop(
+  $cols,
+  $grid-columns: $grid-columns-desktop
+) {
+  $multiplier: $cols / $grid-columns;
+  @return calc(
+    100% * #{$multiplier} - #{$grid-gap-desktop} * (1 - #{$multiplier})
+  );
 }
