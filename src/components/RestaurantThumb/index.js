@@ -1,6 +1,6 @@
 import React from "react"
 
-const RestaurantThumb = ({data}) => {
+const RestaurantThumb = ({ data }) => {
   const {
     Foto_da_Comida: photos,
     Nome_do_Estabelecimento: name,
@@ -10,9 +10,9 @@ const RestaurantThumb = ({data}) => {
   return (
     <div>
       {
-        photos.map( photo => {
+        photos.map(photo => {
           const { thumbnails } = photo;
-          return (
+          return (thumbnails &&
             <div key={thumbnails.full.url}>
               <img src={thumbnails.full.url} width="200" alt={`Foto de ${name}.`} />
             </div>
@@ -22,7 +22,7 @@ const RestaurantThumb = ({data}) => {
       <h3>{name}</h3>
       <p>
         {
-          categories.map( category => (
+          categories.map(category => (
             <span key={category}>{category}</span>
           ))
         }
