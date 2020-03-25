@@ -9,6 +9,19 @@ module.exports = {
     author: `@naodeixefecharaconta`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Playfair Display",
+              variants: ["400", "500", "600", "700"],
+            },
+          ],
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`,

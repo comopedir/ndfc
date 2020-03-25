@@ -5,9 +5,124 @@ body {
   box-sizing: border-box;
   padding: 0 $body-margin-mobile;
 
+  background: #34482B;
+
   @include fromLarge {
     padding: 0 $body-margin-desktop;
   }
+}
+
+.divHomeHeader{
+  @include grid-column-start(1);
+  @include grid-column-span(12);
+  
+}
+
+.divHomeHeaderTopContainer{
+  display:flex; 
+  padding-top: 86px;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+.divHomeHeaderBottomContainer{
+  display:flex; 
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+.divHomeHeaderTitle{
+  justify-content: space-between;
+  font-size: 65px;
+  color: #F6C0AA;
+  font-family: 'Playfair Display', serif;
+}
+
+.divHomeFooterTitle{
+  justify-content: space-between;
+  font-size: 35px;
+  font-family: 'Playfair Display', serif;
+  color: #F6C0AA;
+}
+
+
+.divHomeHeaderPlace{
+  height: 100%;
+  align-self: flex-end;
+}
+
+.aPlace{
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 48px;
+  text-decoration-line: underline;
+  color: #F9D9CE;
+}
+
+.divHomeHeaderSubtitle{
+  justify-content: space-between;
+  font-family: Helvetica;
+  font-size: 21px;
+  line-height: 31px;
+  color: #F6C0AA;
+  padding-top: 34px;
+}
+
+.divHomeHeaderPlaceSubtitle{
+  justify-content: space-between;
+  font-family: Helvetica;
+  font-size: 21px;
+  line-height: 31px;
+  color: #F6C0AA;
+}
+
+
+.divHomeHeaderButton{
+  background-color: #E36840;
+  color: #F6C0AA;
+  font-family: Helvetica;
+  font-size: 21px;
+  height: 64px;
+  width: 154px;
+  display : flex;
+  align-items : center;
+  justify-content: center;
+  
+}
+
+.divHomeHeaderImg{
+  display : flex;
+  align-items : center;
+  justify-content: center;
+}
+
+.divHomeFooterImg{
+  display : flex;
+  align-items : center;
+  justify-content: center;
+}
+
+.imgHeader{
+  width: 315px;
+  height: 278px;
+}
+
+.imgFooter{
+  width: 32px;
+  height: 32px;
+}
+
+
+.footerLine{
+  height: 0px;
+  width: 100%;
+  border: 1px solid #F6C0AA;
+  position: absolute;
+  margin-top: 64px;
 }
 
 .grid {
