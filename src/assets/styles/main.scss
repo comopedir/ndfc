@@ -1,0 +1,23 @@
+@import "variables";
+@import "mixins";
+
+body {
+  box-sizing: border-box;
+  padding: 0 24px;
+
+  @include fromLarge {
+    padding: 0 98px;
+  }
+}
+
+.grid {
+  @include grid;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+footer,
+main {
+  @include grid-column-start(1);
+  @include grid-column-span(12);
+}
