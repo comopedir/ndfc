@@ -9,8 +9,13 @@ module.exports = {
     author: `@naodeixefecharaconta`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["src/assets/styles"],
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
