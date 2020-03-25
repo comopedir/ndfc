@@ -35,9 +35,18 @@ body {
 
 .divHomeHeaderTitle{
   justify-content: space-between;
-  font-size: 55px;
+  font-size: 65px;
+  color: #F6C0AA;
+  font-family: 'Playfair Display', serif;
+}
+
+.divHomeFooterTitle{
+  justify-content: space-between;
+  font-size: 35px;
+  font-family: 'Playfair Display', serif;
   color: #F6C0AA;
 }
+
 
 .divHomeHeaderPlace{
   height: 100%;
@@ -91,11 +100,30 @@ body {
   justify-content: center;
 }
 
+.divHomeFooterImg{
+  display : flex;
+  align-items : center;
+  justify-content: center;
+}
+
 .imgHeader{
   width: 315px;
   height: 278px;
 }
 
+.imgFooter{
+  width: 32px;
+  height: 32px;
+}
+
+
+.footerLine{
+  height: 0px;
+  width: 100%;
+  border: 1px solid #F6C0AA;
+  position: absolute;
+  margin-top: 64px;
+}
 
 .grid {
   @include grid;

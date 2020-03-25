@@ -11,7 +11,7 @@ const HomeHeader = () => {
         <div className="divHomeHeader">
             <div className="divHomeHeaderTopContainer">
                 <div className="divHomeHeaderTitle">
-                    <img className="imgHeader" src={logo}/>
+                    não deixe<br/>fechar<br/>a conta.
                 </div>
                 <div className="divHomeHeaderButton">
                     Cadastrar
