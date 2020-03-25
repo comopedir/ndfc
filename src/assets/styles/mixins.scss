@@ -48,7 +48,8 @@
 @function grid-custom-column($cols, $grid-columns: $grid-columns-mobile) {
   $multiplier: $cols / $grid-columns;
   @return calc(
-    100% * #{$multiplier} - #{$grid-gap-mobile} * (1 - #{$multiplier})
+    (100vw - (#{$body-margin-mobile} * 2)) * #{$multiplier} - #{$grid-gap-mobile} *
+      (1 - #{$multiplier})
   );
 }
 
@@ -58,6 +59,7 @@
 ) {
   $multiplier: $cols / $grid-columns;
   @return calc(
-    100% * #{$multiplier} - #{$grid-gap-desktop} * (1 - #{$multiplier})
+    (100vw - (#{$body-margin-desktop} * 2)) * #{$multiplier} - #{$grid-gap-desktop} *
+      (1 - #{$multiplier})
   );
 }

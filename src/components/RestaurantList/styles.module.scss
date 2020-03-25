@@ -1,0 +1,12 @@
+@import "includes";
+
+.container {
+  @include grid-column-start(1);
+  @include grid-column-span(12);
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

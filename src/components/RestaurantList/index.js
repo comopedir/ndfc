@@ -1,7 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import RestaurantThumb from "../RestaurantThumb"
+
+import styles from "./styles.module.scss"
 
 const RestaurantList = () => {
   const data = useStaticQuery(graphql`
@@ -44,20 +45,21 @@ const RestaurantList = () => {
   const { edges: restaurants } = data.allAirtable;
 
   return (
-    <div>
-      {restaurants.length} lugares que não vamos deixar fechar
-      {
-        restaurants.map(restaurant => {
-          const { id, data } = restaurant.node;
+    <div className={styles.container}>
+      <div className={styles.list}>
+        {
+          restaurants.map(restaurant => {
+            const { id, data } = restaurant.node;
 
-          return (
-            <RestaurantThumb
-              key={id}
-              data={data}
-            />
-          )
-        })
-      }
+            return (
+              <RestaurantThumb
+                key={id}
+                data={data}
+              />
+            )
+          })
+        }
+      </div>
     </div>
   )
 

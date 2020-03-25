@@ -1,5 +1,7 @@
 import React from "react"
 
+import styles from "./styles.module.scss"
+
 const RestaurantThumb = ({ data }) => {
   const {
     Foto_da_Comida: photos,
@@ -7,23 +9,22 @@ const RestaurantThumb = ({ data }) => {
     Categoria: categories,
   } = data;
 
+
+  const photo = photos[0].thumbnails || null;
+
   return (
-    <div>
-      {
-        photos.map(photo => {
-          const { thumbnails } = photo;
-          return (thumbnails &&
-            <div key={thumbnails.full.url}>
-              <img src={thumbnails.full.url} width="200" alt={`Foto de ${name}.`} />
-            </div>
-          )
-        })
+    <div className={styles.container}>
+      {photo &&
+        <div className={styles.thumbnail} key={photo.full.url}>
+          <img src={photo.full.url} alt={`Foto de ${name}.`} />
+        </div>
       }
-      <h3>{name}</h3>
-      <p>
+
+      <h3 className={styles.title}>{name}</h3>
+      <p className={styles.tag}>
         {
-          categories.map(category => (
-            <span key={category}>{category}</span>
+          categories.map((category, index) => (
+            <span key={category}>{category}{index < categories.length - 1 && ','} </span>
           ))
         }
       </p>
