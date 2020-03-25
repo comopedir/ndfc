@@ -1,0 +1,9 @@
+@import "../variables";
+@import "../mixins";
+
+title {
+  @include grid-column-start(1);
+  @include grid-column-span(3);
+  font-size: 90;
+}
+

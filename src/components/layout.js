@@ -14,10 +14,8 @@ import "./../assets/styles/main.scss"
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="grid">
-        <main>{children}</main>
+        <main className="grid">{children}</main>
         <footer></footer>
-      </div>
     </>
   )
 }
