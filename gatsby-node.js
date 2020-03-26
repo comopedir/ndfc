@@ -1,5 +1,5 @@
-const path = require('path')
-const helpers = require('./src/helpers')
+const path = require("path")
+const helpers = require("./src/helpers")
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -41,13 +41,16 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(result => {
     result.data.allAirtable.edges.forEach(({ node }) => {
-      createPage({
-        path: helpers.pageNameByNode(node.data),
-        component: path.resolve('./src/templates/restaurant.js'),
-        context: {
-          data: node
-        }
-      });
-    });
-  });
-};
+      const pagePath = helpers.pageNameByNode(node.data)
+      if (pagePath) {
+        createPage({
+          path: pagePath,
+          component: path.resolve("./src/templates/restaurant.js"),
+          context: {
+            data: node,
+          },
+        })
+      }
+    })
+  })
+}
