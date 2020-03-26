@@ -1,8 +1,5 @@
 import React from "react"
-
-//import styles from "../../assets/styles/components/homeheader.modules.scss"
-import styles from "../../assets/styles/main.scss"
-import logo from "../../images/logo-color-salmon_1b.svg"
+import { Link } from "gatsby"
 import logofood from "../../images/symbol-avocado.png"
 
 const HomeHeader = () => {
@@ -23,13 +20,13 @@ const HomeHeader = () => {
             </div>
             <div className="divHomeHeaderBottomContainer">
                 <div className="divHomeHeaderPlace">
-                    <a href="#" className="aPlace">São Paulo, SP</a><br/>
+                    <Link to="/SP" className="aPlace">São Paulo, SP</Link><br/>
                     <div className="divHomeHeaderPlaceSubtitle">
                         172 lugares que não vamos deixar fechar
                     </div>
                 </div>
                 <div className="divHomeHeaderImg">
-                    <img className="imgHeader" src={logofood}/>
+                    <img className="imgHeader" src={logofood} alt="Logo iFood" />
                 </div>
             </div>
         </div>
