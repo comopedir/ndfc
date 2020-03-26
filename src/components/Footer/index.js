@@ -1,7 +1,4 @@
 import React from "react"
-
-//import styles from "../../assets/styles/components/homeheader.modules.scss"
-import styles from "../../assets/styles/main.scss"
 import logoinsta from "../../images/instagram_footer.png"
 
 const Footer = () => {
@@ -14,7 +11,7 @@ const Footer = () => {
                      #nãodeixefecharaconta   
                 </div>
                 <div className="divHomeFooterImg">
-                    <img className="imgFooter" src={logoinsta}/>
+                    <img className="imgFooter" src={logoinsta} alt="Instagram logo" />
                 </div>
             </div>
         </div>
