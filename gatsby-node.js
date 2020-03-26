@@ -1,7 +1,53 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path')
+const helpers = require('./src/helpers')
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  return graphql(`
+    query RestaurantList {
+      allAirtable {
+        edges {
+          node {
+            id
+            data {
+              Estado
+              Website
+              WhatsApp
+              Observa__es
+              Cidade
+              Email
+              Nome_do_Estabelecimento
+              # Doa__es
+              Categoria
+              Como_Pedir
+              Servi_os
+              Foto_da_Comida {
+                filename
+                thumbnails {
+                  full {
+                    url
+                    height
+                    width
+                  }
+                }
+                url
+              }
+              Instagram
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    result.data.allAirtable.edges.forEach(({ node }) => {
+      createPage({
+        path: helpers.pageNameByNode(node.data),
+        component: path.resolve('./src/templates/restaurant.js'),
+        context: {
+          data: node
+        }
+      });
+    });
+  });
+};
