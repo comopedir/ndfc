@@ -2,13 +2,13 @@
 
 .container {
   @include grid;
-  padding-top: 105rem;
+  padding-top: 10.5rem;
   width: 100%;
-  margin-bottom: 350rem;
+  margin-bottom: 35rem;
 
   @include fromLarge {
-    padding-top: 70rem;
-    margin-bottom: 180rem;
+    padding-top: 7rem;
+    margin-bottom: 18rem;
   }
 }
 
@@ -19,9 +19,9 @@
   h1 {
     font-weight: $font-light;
     margin: 0;
-    font-size: 135rem;
+    font-size: 13.5rem;
     line-height: 1.13;
-    letter-spacing: -1rem;
+    letter-spacing: -0.1rem;
     color: #f6c0aa;
     font-family: "Playfair Display", serif;
   }
@@ -32,7 +32,7 @@
 
     h1 {
       display: inline-block;
-      font-size: 71rem;
+      font-size: 7.1rem;
       line-height: 1.09;
       width: grid-custom-column(2);
     }
@@ -41,20 +41,20 @@
 
 .subtitle {
   width: 82%;
-  margin: 41rem 0 0 0;
+  margin: 4.1rem 0 0 0;
   font-family: Helvetica;
-  font-size: 55.9rem;
+  font-size: 5.59rem;
   line-height: 1.4;
   color: #f6c0aa;
   font-weight: 300;
-  letter-spacing: -0.6rem;
-  word-spacing: -4.1rem;
+  letter-spacing: -0.06rem;
+  word-spacing: -0.41rem;
 
   @include fromLarge {
-    font-size: 21rem;
-    letter-spacing: -0.1rem;
-    word-spacing: -0.05rem;
-    margin-top: 28rem;
+    font-size: 2.1rem;
+    letter-spacing: -0.01rem;
+    word-spacing: -0.005rem;
+    margin-top: 2.8rem;
   }
 }
 
@@ -62,12 +62,12 @@
   @include grid-column-start(5);
   @include grid-column-span(2);
 
-  margin-top: 55rem;
+  margin-top: 5.5rem;
   background-color: #e36840;
   color: #f6c0aa;
   font-family: Helvetica;
-  font-size: 50rem;
-  height: 150rem;
+  font-size: 5rem;
+  height: 15rem;
   width: grid-custom-column(2);
   max-width: grid-custom-column(2);
   display: flex;
@@ -80,8 +80,8 @@
 
     width: grid-custom-column-desktop(2);
     max-width: grid-custom-column-desktop(2);
-    margin-top: 16rem;
-    font-size: 20rem;
-    height: 63rem;
+    margin-top: 1.6rem;
+    font-size: 2rem;
+    height: 6.3rem;
   }
 }

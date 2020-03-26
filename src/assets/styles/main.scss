@@ -2,18 +2,16 @@
 @import "mixins";
 
 html {
-  font-size: calc(100vw / 1440);
+  // defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
   font-weight: $font-light;
-
-  @include fromLarge {
-    font-size: calc(100vw / 1440);
-  }
 }
 
 body {
   box-sizing: border-box;
   padding: 0 $body-margin-mobile;
   background: #34482b;
+  font-size: 1.6rem; // resets default font-size to 16px (and scales what user defines in browser settings)
 
   @include fromLarge {
     padding: 0 $body-margin-desktop;
@@ -50,19 +48,19 @@ main {
 }
 
 .imgHeader {
-  width: 315rem;
-  height: 278rem;
+  width: 31.5rem;
+  height: 27.8rem;
 }
 
 .imgFooter {
-  width: 32rem;
-  height: 32rem;
+  width: 3.2rem;
+  height: 3.2rem;
 }
 
 .footerLine {
   height: 0rem;
   width: 100%;
-  border: 1rem solid #f6c0aa;
+  border: 0.1rem solid #f6c0aa;
   position: absolute;
-  margin-top: 64rem;
+  margin-top: 6.4rem;
 }
