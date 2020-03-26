@@ -1,0 +1,87 @@
+@import "includes";
+
+.container {
+  @include grid;
+  padding-top: 105rem;
+  width: 100%;
+  margin-bottom: 350rem;
+
+  @include fromLarge {
+    padding-top: 70rem;
+    margin-bottom: 180rem;
+  }
+}
+
+.logo {
+  @include grid-column-start(1);
+  @include grid-column-span(4);
+
+  h1 {
+    font-weight: $font-light;
+    margin: 0;
+    font-size: 135rem;
+    line-height: 1.13;
+    letter-spacing: -1rem;
+    color: #f6c0aa;
+    font-family: "Playfair Display", serif;
+  }
+
+  @include fromLarge {
+    @include grid-column-start(1);
+    @include grid-column-span(6);
+
+    h1 {
+      display: inline-block;
+      font-size: 71rem;
+      line-height: 1.09;
+      width: grid-custom-column(2);
+    }
+  }
+}
+
+.subtitle {
+  width: 82%;
+  margin: 41rem 0 0 0;
+  font-family: Helvetica;
+  font-size: 55.9rem;
+  line-height: 1.4;
+  color: #f6c0aa;
+  font-weight: 300;
+  letter-spacing: -0.6rem;
+  word-spacing: -4.1rem;
+
+  @include fromLarge {
+    font-size: 21rem;
+    letter-spacing: -0.1rem;
+    word-spacing: -0.05rem;
+    margin-top: 28rem;
+  }
+}
+
+.button {
+  @include grid-column-start(5);
+  @include grid-column-span(2);
+
+  margin-top: 55rem;
+  background-color: #e36840;
+  color: #f6c0aa;
+  font-family: Helvetica;
+  font-size: 50rem;
+  height: 150rem;
+  width: grid-custom-column(2);
+  max-width: grid-custom-column(2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include fromLarge {
+    @include grid-column-start(11);
+    @include grid-column-span(2);
+
+    width: grid-custom-column-desktop(2);
+    max-width: grid-custom-column-desktop(2);
+    margin-top: 16rem;
+    font-size: 20rem;
+    height: 63rem;
+  }
+}

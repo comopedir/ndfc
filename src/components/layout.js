@@ -10,12 +10,16 @@ import PropTypes from "prop-types"
 
 import 'normalize.css'
 import "./../assets/styles/main.scss"
+import Header from "./../components/Header"
 
 const Layout = ({ children }) => {
   return (
     <>
-        <main className="grid">{children}</main>
-        <footer></footer>
+      <Header />
+      <main className="grid">
+        {children}
+      </main>
+      <footer></footer>
     </>
   )
 }
