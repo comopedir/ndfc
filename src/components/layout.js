@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import 'normalize.css'
+import "normalize.css"
 import "./../assets/styles/main.scss"
 import Header from "./../components/Header"
 
@@ -16,9 +16,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="grid">
-        {children}
-      </main>
+      <main className="grid">{children}</main>
       <footer></footer>
     </>
   )

@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import Jokes from "../content/jokes.mdx";
+import Jokes from "../content/jokes.mdx"
 
 const NotFoundPage = () => (
   <Layout>
