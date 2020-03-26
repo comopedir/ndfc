@@ -10,6 +10,8 @@ body {
   @include fromLarge {
     padding: 0 $body-margin-desktop;
   }
+
+  background-color: #34482b;
 }
 
 .divHomeHeader{
@@ -135,4 +137,9 @@ footer,
 main {
   @include grid-column-start(1);
   @include grid-column-span(12);
+}
+
+.teste {
+  display: flex;
+  justify-content: space-between;
 }
