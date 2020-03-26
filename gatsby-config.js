@@ -27,7 +27,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["src/assets/styles"],
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -51,7 +51,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`
+      resolve: `gatsby-plugin-mdx`,
     },
     {
       resolve: `gatsby-source-airtable`,
@@ -61,15 +61,15 @@ module.exports = {
         tables: [
           {
             baseId: `${process.env.AIRTABLE_RESTAURANTS_BASE_ID}`,
-            tableName: `${process.env.AIRTABLE_RESTAURANTS_TABLE_NAME}`
+            tableName: `${process.env.AIRTABLE_RESTAURANTS_TABLE_NAME}`,
           },
-        ]
-      }
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: 'site.naodeixefecharaconta.com'
+        bucketName: "site.naodeixefecharaconta.com",
       },
     },
   ],

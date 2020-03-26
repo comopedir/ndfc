@@ -42,11 +42,10 @@ const RestaurantList = () => {
     }
   `)
 
-  const { edges: restaurants } = data.allAirtable;
+  const { edges: restaurants } = data.allAirtable
 
   return (
     <div className={styles.container}>
-
       <div className={styles.citys}>
         <a href="#">São Paulo, SP</a>
         <p className={styles.subtitle}>
@@ -54,24 +53,15 @@ const RestaurantList = () => {
         </p>
       </div>
 
-
       <div className={styles.list}>
-        {
-          restaurants.map(restaurant => {
-            const { id, data } = restaurant.node;
+        {restaurants.map(restaurant => {
+          const { id, data } = restaurant.node
 
-            return (
-              <RestaurantThumb
-                key={id}
-                data={data}
-              />
-            )
-          })
-        }
+          return <RestaurantThumb key={id} data={data} />
+        })}
       </div>
     </div>
   )
-
 }
 
 export default RestaurantList
