@@ -16,9 +16,9 @@ const RestaurantThumb = ({ data }) => {
   return (
     <div className={styles.container}>
       {photo && (
-        <div className={styles.thumbnail} key={photo.full.url}>
+        <div className={styles.thumbnail} key={photo.full?.url}>
           <Link to={pageNameByNode(data)}>
-            <img src={photo.full.url} alt={`Foto de ${name}.`} />
+            <img src={photo.full?.url} alt={`Foto de ${name}.`} />
           </Link>
         </div>
       )}
