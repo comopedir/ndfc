@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+import { pageNameByNode } from "../../helpers"
 
 import styles from "./styles.module.scss"
 
@@ -9,14 +11,15 @@ const RestaurantThumb = ({ data }) => {
     Categoria: categories,
   } = data;
 
-
-  const photo = photos[0].thumbnails || null;
+  const photo = (photos && photos.length && photos[0].thumbnails) || null;
 
   return (
     <div className={styles.container}>
       {photo &&
         <div className={styles.thumbnail} key={photo.full.url}>
-          <img src={photo.full.url} alt={`Foto de ${name}.`} />
+          <Link to={pageNameByNode(data)}>
+            <img src={photo.full.url} alt={`Foto de ${name}.`} />
+          </Link>
         </div>
       }
 
