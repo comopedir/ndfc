@@ -46,6 +46,15 @@ const RestaurantList = () => {
 
   return (
     <div className={styles.container}>
+
+      <div className={styles.citys}>
+        <a href="#">São Paulo, SP</a>
+        <p className={styles.subtitle}>
+          {restaurants.length} lugares que não vamos deixar fechar
+        </p>
+      </div>
+
+
       <div className={styles.list}>
         {
           restaurants.map(restaurant => {

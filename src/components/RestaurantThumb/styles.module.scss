@@ -2,35 +2,35 @@
 
 .container {
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 30rem;
   width: grid-custom-column(3);
 
   @include fromLarge {
     width: grid-custom-column-desktop(4);
-    margin-bottom: 60px;
+    margin-bottom: 60rem;
   }
 }
 
 .thumbnail {
   box-sizing: border-box;
   overflow: hidden;
-  border: solid 10px #fff;
+  border: solid 10rem #fff;
   width: grid-custom-column(3);
   height: grid-custom-column(3);
-  margin-bottom: 13px;
+  margin-bottom: 13rem;
   transition: all 0.2s;
   cursor: pointer;
   position: relative;
 
   @include fromLarge {
-    border: solid 10px #fff;
+    border: solid 10rem #fff;
     width: grid-custom-column-desktop(4);
     height: grid-custom-column-desktop(4);
-    margin-bottom: 24px;
+    margin-bottom: 24rem;
   }
 
   &:hover {
-    border: solid 20px #e36840;
+    border: solid 20rem #e36840;
   }
 
   img {
@@ -47,23 +47,23 @@
   font-family: $font-sans-serif;
   color: $color-givry;
   line-height: 1;
-  font-size: 14px;
-  margin: 0 0 6px 0;
+  font-size: 14rem;
+  margin: 0 0 6rem 0;
 
   @include fromLarge {
-    font-size: 28px;
-    margin: 0 0 15px 0;
+    font-size: 28rem;
+    margin: 0 0 15rem 0;
   }
 }
 
 .tag {
-  font-size: 12px;
+  font-size: 12rem;
   line-height: 1;
   font-family: $font-sans-serif;
   color: $color-manhattan;
   margin: 0;
 
   @include fromLarge {
-    font-size: 21px;
+    font-size: 21rem;
   }
 }

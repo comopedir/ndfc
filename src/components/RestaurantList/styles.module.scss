@@ -2,11 +2,57 @@
 
 .container {
   @include grid-column-start(1);
-  @include grid-column-span(12);
+  @include grid-column-span(6);
+
+  @include fromLarge {
+    @include grid-column-start(1);
+    @include grid-column-span(12);
+  }
 }
 
 .list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.citys {
+  margin-bottom: 50rem;
+
+  a {
+    color: #f9d9ce;
+    font-size: 95rem;
+    word-spacing: -4.1rem;
+    letter-spacing: -0.6rem;
+    font-family: Helvetica;
+    font-weight: $font-bold;
+    text-decoration: none;
+
+    @include fromLarge {
+      font-size: 45rem;
+    }
+  }
+
+  @include fromLarge {
+    margin-bottom: 20rem;
+  }
+}
+
+.subtitle {
+  font-family: Helvetica;
+  font-size: 55.9rem;
+  line-height: 1.4;
+  color: #f6c0aa;
+  font-weight: 300;
+  letter-spacing: -0.6rem;
+  word-spacing: -4.1rem;
+  margin: 10rem 0 0 0;
+
+  @include fromLarge {
+    font-size: 21rem;
+    letter-spacing: -0.1rem;
+    word-spacing: -0.05rem;
+    margin-top: 28rem;
+    margin: 5rem 0 0 0;
+  }
 }
