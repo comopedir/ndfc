@@ -1,0 +1,76 @@
+@import "includes";
+
+.container {
+  @include grid;
+  @include grid-column-start(1);
+  @include grid-column-span(12);
+
+  @include fromLarge {
+    margin-top: -4rem;
+    margin-bottom: 20rem;
+  }
+}
+
+.questions {
+  @include grid-column-start(1);
+  @include grid-column-span(6);
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: $font-medium;
+  color: var(--tertiary-color);
+
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  display: inline-block;
+  width: 50%;
+
+  @include fromLarge {
+    font-size: 3.6rem;
+    margin-bottom: 12rem;
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+.question {
+  font-size: 1.8rem;
+  color: var(--tertiary-color);
+  margin-bottom: 4rem;
+  line-height: 1.5;
+
+  p {
+    font-weight: $font-medium;
+  }
+
+  a {
+    color: var(--tertiary-color);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include fromLarge {
+    margin-bottom: 3rem;
+    line-height: 1.5;
+
+    p {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.faqImage {
+  position: absolute;
+
+  top: -5rem;
+  right: -2.5rem;
+  width: 20rem;
+
+  @include fromLarge {
+    top: 0;
+    right: -10rem;
+    width: 80rem;
+  }
+}
