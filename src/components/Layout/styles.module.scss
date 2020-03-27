@@ -1,0 +1,9 @@
+@import "includes";
+
+.container {
+  padding: 3.4rem 2.4rem;
+
+  @include fromLarge {
+    padding: 8.6rem 9.8rem;
+  }
+}

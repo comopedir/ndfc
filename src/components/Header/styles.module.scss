@@ -2,12 +2,10 @@
 
 .container {
   @include grid;
-  padding-top: 10.5rem;
   width: 100%;
   margin-bottom: 35rem;
 
   @include fromLarge {
-    padding-top: 7rem;
     margin-bottom: 18rem;
   }
 }
