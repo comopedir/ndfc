@@ -49,6 +49,7 @@ const RestaurantPage = ({ pageContext }) => {
             instagram={instagram}
             wpp={wpp}
             services={services}
+            name={restaurantName}
           />
         </div>
       )}
