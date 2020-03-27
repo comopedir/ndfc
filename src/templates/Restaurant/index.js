@@ -60,6 +60,7 @@ const RestaurantPage = ({ pageContext }) => {
           </h3>
           {pictures.map(item => (
             <img
+              key={item.url}
               className={styles.picture}
               src={item.url}
               alt={item.filename}
