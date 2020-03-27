@@ -23,7 +23,7 @@ const options = {
   ),
   instagram: ({ instagram }) => {
     let handle = instagram.replace(
-      /(https?:\/\/)?(\w*\.*)instagram.com(.br)?\//,
+      /(https?:\/\/)?(\w*\.*)?inst(r)?ag(r)?am.com(.br)?\//,
       "@"
     )
     return (
@@ -50,36 +50,46 @@ const OptionButton = ({
   website,
 }) => {
   let Content
-  const contentProps = {}
+  let contentProps
   switch (option) {
     case "iFood":
     case "Rappi":
     case "Uber Eats":
     case "James Delivery":
       Content = options.app
-      contentProps.app = option
+      if (option) {
+        contentProps = { app: option }
+      }
       break
     case "Telefone":
       Content = options.phone
-      contentProps.number = phone
+      if (phone) {
+        contentProps = { number: phone }
+      }
       break
     case "Whatsapp":
       Content = options.wpp
-      contentProps.number = wpp
+      if (wpp) {
+        contentProps = { number: wpp }
+      }
       break
     case "DM no Instagram":
       Content = options.instagram
-      contentProps.instagram = instagram
+      if (instagram) {
+        contentProps = { instagram }
+      }
       break
     case "Website":
       Content = options.website
-      contentProps.website = website
+      if (website) {
+        contentProps = { website }
+      }
       break
     default:
       break
   }
 
-  if (!Content) {
+  if (!Content || !contentProps) {
     return null
   }
 

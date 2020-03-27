@@ -40,7 +40,7 @@ const RestaurantOptions = ({
         case "DM no Instagram":
           if (instagram) {
             href = instagram.replace(
-              /(\@)|((\w*\.*)?instagram.com(.br)?\/?)/,
+              /(\@)|((\w*\.*)?inst(r)?ag(r)?am.com(.br)?\/?)/,
               "https://www.instagram.com/"
             )
           }
