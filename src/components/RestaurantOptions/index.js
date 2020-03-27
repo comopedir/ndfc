@@ -5,10 +5,10 @@ import OptionButton from "./OptionButton"
 
 const RestaurantOptions = ({
   options = [],
-  phone = '',
-  wpp = '',
-  instagram = '',
-  website = '',
+  phone,
+  wpp,
+  instagram,
+  website,
   services = [],
   name,
 }) => (
