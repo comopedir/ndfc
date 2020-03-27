@@ -3,7 +3,7 @@
 .container {
   @include grid;
   width: 100%;
-  margin-bottom: 35rem;
+  margin-bottom: 9.5rem;
 
   @include fromLarge {
     margin-bottom: 18rem;
@@ -14,72 +14,85 @@
   @include grid-column-start(1);
   @include grid-column-span(4);
 
-  h1 {
+  a {
     font-weight: $font-light;
     margin: 0;
-    font-size: 13.5rem;
+    font-size: 3.5rem;
     line-height: 1.13;
-    letter-spacing: -0.1rem;
     color: #f6c0aa;
     font-family: "Playfair Display", serif;
+    margin-top: -0.6rem;
+    width: 20rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
   }
 
   @include fromLarge {
     @include grid-column-start(1);
     @include grid-column-span(6);
 
-    h1 {
+    a {
       display: inline-block;
       font-size: 7.1rem;
       line-height: 1.09;
-      width: grid-custom-column(2);
+      width: 30rem;
+      margin-top: -1.8rem;
     }
   }
 }
 
 .subtitle {
   width: 82%;
-  margin: 4.1rem 0 0 0;
+  margin: 1rem 0 0 0;
   font-family: Helvetica;
-  font-size: 5.59rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   color: #f6c0aa;
   font-weight: 300;
-  letter-spacing: -0.06rem;
-  word-spacing: -0.41rem;
 
   @include fromLarge {
     font-size: 2.1rem;
-    letter-spacing: -0.01rem;
-    word-spacing: -0.005rem;
     margin-top: 2.8rem;
   }
 }
 
-.button {
+.menu {
   @include grid-column-start(5);
   @include grid-column-span(2);
-
-  margin-top: 5.5rem;
-  background-color: #e36840;
-  color: #f6c0aa;
-  font-family: Helvetica;
-  font-size: 5rem;
-  height: 15rem;
-  width: grid-custom-column(2);
-  max-width: grid-custom-column(2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0;
 
   @include fromLarge {
     @include grid-column-start(11);
     @include grid-column-span(2);
+  }
+}
 
-    width: grid-custom-column-desktop(2);
-    max-width: grid-custom-column-desktop(2);
-    margin-top: 1.6rem;
+.button {
+  background-color: #e36840;
+  color: #f6c0aa;
+  font-family: Helvetica;
+  font-size: 1.4rem;
+  height: 4rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  transition: ease-in-out 0.4s;
+  cursor: pointer;
+  float: right;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: #f6c0aa;
+    color: #34482b;
+  }
+
+  @include fromLarge {
+    width: 15rem;
     font-size: 2rem;
     height: 6.3rem;
+    margin-top: 0;
   }
 }
