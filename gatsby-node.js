@@ -45,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
       if (pagePath) {
         createPage({
           path: pagePath,
-          component: path.resolve("./src/templates/restaurant.js"),
+          component: path.resolve("./src/templates/Restaurant/index.js"),
           context: {
             data: node,
           },
