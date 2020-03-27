@@ -34,7 +34,7 @@ const RestaurantPage = ({ pageContext }) => {
           name={restaurantName}
           city={city}
           state={state}
-          category={categories[0]}
+          categories={categories}
         />
       </div>
       <div className={styles.categoryImage}>
