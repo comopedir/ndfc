@@ -11,14 +11,16 @@
   text-decoration: none;
   color: #f9d9ce;
   outline: 0.4rem solid #f9d9ce;
+  outline-offset: -0.4rem;
   display: flex;
   align-items: flex-end;
-  transition: outline 300ms ease;
+  transition: all 300ms ease;
 }
 
 a.button:hover {
   height: 17.6rem;
   outline: 1rem solid #f9d9ce;
+  outline-offset: -1rem;
 }
 
 .service {
