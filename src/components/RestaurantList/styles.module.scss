@@ -20,7 +20,7 @@
   margin-bottom: 5rem;
 
   a {
-    color: #f9d9ce;
+    color: var(--tertiary-color);
     font-size: 2.5rem;
     font-family: Helvetica;
     font-weight: $font-bold;
@@ -40,7 +40,7 @@
   font-family: Helvetica;
   font-size: 1.4rem;
   line-height: 1.4;
-  color: #f6c0aa;
+  color: var(--tertiary-color);
   font-weight: 300;
   margin: 0.5rem 0 0 0;
 
