@@ -77,3 +77,13 @@
   margin-top: 2.5rem;
   width: 100%;
 }
+
+.footer {
+  @include grid-column-span($grid-columns-mobile);
+  @include grid-column-start(1);
+  margin-top: 8rem;
+
+  @include fromLarge {
+    @include grid-column-span($grid-columns-desktop);
+  }
+}
