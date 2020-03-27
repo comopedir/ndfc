@@ -4,7 +4,7 @@ import styles from "./styles.module.scss"
 const Button = ({ href, children }) => {
   const Tag = href ? "a" : "div"
   return (
-    <Tag className={styles.button} href={href}>
+    <Tag target="_blank" className={styles.button} href={href}>
       <div className={styles.service}>{children}</div>
     </Tag>
   )
