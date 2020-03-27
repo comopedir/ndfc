@@ -1,0 +1,42 @@
+@import "includes";
+
+.header {
+  @include grid-column-span(9);
+}
+
+.categoryImage {
+  @include grid-column-span(3);
+  @include grid-column-start(10);
+  position: relative;
+
+  & > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.links {
+  @include grid-column-start(1);
+  @include grid-column-span($grid-columns-desktop);
+
+  margin-top: 5.8rem;
+}
+
+.pictures {
+  @include grid-column-span($grid-columns-desktop);
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+.picturesTitle {
+  color: #f9d9ce;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+}
+
+.picture {
+  margin-top: 2.5rem;
+  width: 100%;
+}

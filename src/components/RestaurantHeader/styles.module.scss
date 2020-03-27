@@ -1,0 +1,29 @@
+@import "includes";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #f9d9ce;
+}
+
+.title {
+  margin: 0;
+  font-size: 9rem;
+  line-height: 10.3rem;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 2.1rem;
+}
+
+.separator {
+  margin: 0 1rem;
+}
+
+.location {
+  color: #f9d9ce;
+  text-decoration: underline;
+}
