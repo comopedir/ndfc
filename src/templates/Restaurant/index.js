@@ -7,7 +7,7 @@ import RestaurantHeader from "../../components/RestaurantHeader"
 
 import categoryImage from "../../assets/images/fish.png"
 import styles from "./styles.module.scss"
-import RestaurantServices from "../../components/RestaurantServices"
+import RestaurantOptions from "../../components/RestaurantOptions"
 
 const RestaurantPage = ({ pageContext }) => {
   const {
@@ -18,8 +18,13 @@ const RestaurantPage = ({ pageContext }) => {
     Estado: state,
     Cidade: city,
     Categoria: categories,
-    Como_Pedir: services,
+    Como_Pedir: options,
     Foto_da_Comida: pictures,
+    Website: website,
+    WhatsApp: wpp,
+    Instagram: instagram,
+    Telefone_Para_Pedidos: phone,
+    Servi_os: services,
   } = data
 
   return (
@@ -36,9 +41,16 @@ const RestaurantPage = ({ pageContext }) => {
       <div className={styles.categoryImage}>
         <img src={categoryImage} />
       </div>
-      {services && (
+      {options && (
         <div className={styles.links}>
-          <RestaurantServices services={services} />
+          <RestaurantOptions
+            options={options}
+            website={website}
+            phone={phone || wpp}
+            instagram={instagram}
+            wpp={wpp}
+            services={services}
+          />
         </div>
       )}
       {pictures && (
