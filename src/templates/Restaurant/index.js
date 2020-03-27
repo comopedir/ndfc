@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
-import Footer from "../../components/Footer"
 import RestaurantHeader from "../../components/RestaurantHeader"
 
 import categoryImage from "../../assets/images/fish.png"
@@ -23,7 +22,7 @@ const RestaurantPage = ({ pageContext }) => {
     Website: website,
     WhatsApp: wpp,
     Instagram: instagram,
-    Telefone_Para_Pedidos: phone,
+    Telefone_para_Pedidos: phone,
     Servi_os: services,
   } = data
 

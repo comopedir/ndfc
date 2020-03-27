@@ -18,7 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
               Cidade
               Email
               Nome_do_Estabelecimento
-              # Doa__es
+              Telefone_para_Pedidos
               Categoria
               Como_Pedir
               Servi_os
