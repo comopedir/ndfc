@@ -21,9 +21,7 @@
 
   a {
     color: #f9d9ce;
-    font-size: 9.5rem;
-    word-spacing: -0.41rem;
-    letter-spacing: -0.06rem;
+    font-size: 2.5rem;
     font-family: Helvetica;
     font-weight: $font-bold;
     text-decoration: none;
@@ -40,18 +38,14 @@
 
 .subtitle {
   font-family: Helvetica;
-  font-size: 5.59rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   color: #f6c0aa;
   font-weight: 300;
-  letter-spacing: -0.06rem;
-  word-spacing: -0.41rem;
-  margin: 1rem 0 0 0;
+  margin: 0.5rem 0 0 0;
 
   @include fromLarge {
     font-size: 2.1rem;
-    letter-spacing: -0.01rem;
-    word-spacing: -0.005rem;
     margin-top: 2.8rem;
     margin: 0.5rem 0 0 0;
   }
