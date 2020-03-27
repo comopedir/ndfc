@@ -1,16 +1,14 @@
 import React from "react"
-import logoinsta from "../../images/instagram_footer.png"
+import styles from "./styles.module.scss"
 
 const Footer = () => {
   return (
-    <div className="divHomeHeader">
-      <div className="footerLine"></div>
-      <div className="divHomeHeaderTopContainer">
-        <div className="divHomeFooterTitle">#nãodeixefecharaconta</div>
-        <div className="divHomeFooterImg">
-          <img className="imgFooter" src={logoinsta} alt="Instagram logo" />
-        </div>
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <p className={styles.contact}>@naodeixefecharaconta</p>
+        <p className={styles.contact}>#naodeixefecharaconta</p>
       </div>
+      <p className={styles.contact}>Contato</p>
     </div>
   )
 }

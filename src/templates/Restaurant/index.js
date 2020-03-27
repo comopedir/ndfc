@@ -9,6 +9,7 @@ import styles from "./styles.module.scss"
 import RestaurantOptions from "../../components/RestaurantOptions"
 import variables from "../../assets/styles/variables.scss"
 import useTheme from "../../hooks/useTheme"
+import Footer from "../../components/Footer"
 
 const RestaurantPage = ({ pageContext }) => {
   const {
@@ -72,6 +73,9 @@ const RestaurantPage = ({ pageContext }) => {
           ))}
         </div>
       )}
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </Layout>
   )
 }
