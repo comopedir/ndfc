@@ -9,8 +9,8 @@
   height: 17.6rem;
   padding: 1.8rem 2.6rem;
   text-decoration: none;
-  color: #f9d9ce;
-  outline: 0.4rem solid #f9d9ce;
+  color: var(--tertiary-color);
+  outline: 0.4rem solid var(--tertiary-color);
   outline-offset: -0.4rem;
   display: flex;
   align-items: flex-end;
@@ -19,7 +19,7 @@
 
 a.button:hover {
   height: 17.6rem;
-  outline: 1rem solid #f9d9ce;
+  outline: 1rem solid var(--tertiary-color);
   outline-offset: -1rem;
 }
 

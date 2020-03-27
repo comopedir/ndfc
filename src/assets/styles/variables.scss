@@ -1,6 +1,8 @@
 $color-givry: #f9d9ce;
-$color-manhattan: #f6c0aa;
 $color-red-damask: #e36840;
+$color-kombu-green: #34482b;
+$color-flax: #e4da97;
+$color-kenyan-copper: #7c1d0e;
 
 /* FONT FAMILY */
 $font-sans-serif: Helvetica, Arial, sans-serif;
@@ -25,3 +27,17 @@ $grid-gap-mobile: 1.5rem;
 /* BREAKPOINTS */
 $bp-small: 375px;
 $bp-large: 992px;
+
+:root {
+  --primary-color: #{$color-kombu-green};
+  --secondary-color: #{$color-red-damask};
+  --tertiary-color: #{$color-givry};
+}
+
+:export {
+  colorMediumVermilion: $color-red-damask;
+  colorKombuGreen: $color-kombu-green;
+  colorUnbleachedSilk: $color-givry;
+  colorFlax: $color-flax;
+  colorKenyanCopper: $color-kenyan-copper;
+}

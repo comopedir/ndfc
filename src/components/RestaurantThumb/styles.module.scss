@@ -30,7 +30,7 @@
   }
 
   &:hover {
-    border: solid 2rem #e36840;
+    border: solid 2rem var(--secondary-color);
   }
 
   img {
@@ -60,7 +60,7 @@
   font-size: 1.2rem;
   line-height: 1;
   font-family: $font-sans-serif;
-  color: $color-manhattan;
+  color: $color-givry;
   margin: 0;
 
   @include fromLarge {

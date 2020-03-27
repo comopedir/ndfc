@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
@@ -7,6 +7,8 @@ import RestaurantHeader from "../../components/RestaurantHeader"
 import categoryImage from "../../assets/images/fish.png"
 import styles from "./styles.module.scss"
 import RestaurantOptions from "../../components/RestaurantOptions"
+import variables from "../../assets/styles/variables.scss"
+import useTheme from "../../hooks/useTheme"
 
 const RestaurantPage = ({ pageContext }) => {
   const {
@@ -25,6 +27,8 @@ const RestaurantPage = ({ pageContext }) => {
     Telefone_para_Pedidos: phone,
     Servi_os: services,
   } = data
+
+  useTheme(categories[0])
 
   return (
     <Layout>

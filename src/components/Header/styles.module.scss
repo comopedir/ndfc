@@ -19,7 +19,7 @@
     margin: 0;
     font-size: 3.5rem;
     line-height: 1.13;
-    color: #f6c0aa;
+    color: var(--tertiary-color);
     font-family: "Playfair Display", serif;
     margin-top: -0.6rem;
     width: 20rem;
@@ -48,7 +48,7 @@
   font-family: Helvetica;
   font-size: 1.4rem;
   line-height: 1.4;
-  color: #f6c0aa;
+  color: var(--tertiary-color);
   font-weight: 300;
 
   @include fromLarge {
@@ -69,8 +69,8 @@
 }
 
 .button {
-  background-color: #e36840;
-  color: #f6c0aa;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
   font-family: Helvetica;
   font-size: 1.4rem;
   height: 4rem;
@@ -85,8 +85,8 @@
   margin-top: 1rem;
 
   &:hover {
-    background-color: #f6c0aa;
-    color: #34482b;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
   }
 
   @include fromLarge {
