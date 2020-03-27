@@ -15,40 +15,43 @@ const RestaurantOptions = ({
   <div className={styles.container}>
     {options.map((option, index, array) => {
       let href
-      try {
-        switch (option) {
-          case "iFood":
-            const searchUrl = "https://www.ifood.com.br/busca?q="
-            href = `${searchUrl}${encodeURI(name)}`
-            break
-          case "Rappi":
-            href = `https://www.rappi.com.br/search?store_type=all&query=${encodeURI(
-              name
-            )}`
-            break
-          case "Whatsapp":
+      switch (option) {
+        case "iFood":
+          const searchUrl = "https://www.ifood.com.br/busca?q="
+          if (name) {
+            href = `${searchUrl}${encodeURIComponent(name)}`
+          }
+          break
+        case "Rappi":
+          href = `https://www.rappi.com.br/search?store_type=all&query=${encodeURIComponent(
+            name
+          )}`
+          break
+        case "Whatsapp":
+          if (wpp) {
             href = `whatsapp://send?&phone=${wpp.replace(/\D*/g, "")}`
-            break
-          case "Telefone":
+          }
+          break
+        case "Telefone":
+          if (phone) {
             href = `tel:${phone.replace(/\D*/g, "")}`
-            break
-          case "DM no Instagram":
+          }
+          break
+        case "DM no Instagram":
+          if (instagram) {
             href = instagram.replace(
               /(\@)|((\w*\.*)?instagram.com(.br)?\/?)/,
               "https://www.instagram.com/"
             )
-            break
-          case "Website":
-            href = website
-            break
-          case "Uber Eats":
-          case "James Delivery":
-          default:
-            break
-        }
-      }
-      catch (error) {
-        console.log('Erro na exibição do dado.');
+          }
+          break
+        case "Website":
+          href = website
+          break
+        case "Uber Eats":
+        case "James Delivery":
+        default:
+          break
       }
 
       return index !== 3 || index !== array.length - 1 || !services.length ? (
