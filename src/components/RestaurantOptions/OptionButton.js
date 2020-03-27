@@ -51,6 +51,7 @@ const OptionButton = ({
 }) => {
   let Content
   let contentProps
+  let className
   switch (option) {
     case "iFood":
     case "Rappi":
@@ -59,18 +60,21 @@ const OptionButton = ({
       Content = options.app
       if (option) {
         contentProps = { app: option }
+        className = styles.withBackground
       }
       break
     case "Telefone":
       Content = options.phone
       if (phone) {
         contentProps = { number: phone }
+        className = styles.withBackground
       }
       break
     case "Whatsapp":
       Content = options.wpp
       if (wpp) {
         contentProps = { number: wpp }
+        className = styles.withBackground
       }
       break
     case "DM no Instagram":
@@ -94,7 +98,7 @@ const OptionButton = ({
   }
 
   return (
-    <Button href={href}>
+    <Button className={className} href={href}>
       <Content {...contentProps} />
     </Button>
   )
