@@ -28,6 +28,8 @@
 
     & > img {
       bottom: 0;
+      max-height: 20rem;
+      max-width: grid-custom-column-desktop(4);
     }
   }
   position: relative;

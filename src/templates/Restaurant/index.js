@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
@@ -9,6 +9,8 @@ import styles from "./styles.module.scss"
 import RestaurantOptions from "../../components/RestaurantOptions"
 import useTheme from "../../hooks/useTheme"
 import Footer from "../../components/Footer"
+
+import { themes } from "../../utils/theming"
 
 const RestaurantPage = ({ pageContext }) => {
   const {
@@ -42,7 +44,11 @@ const RestaurantPage = ({ pageContext }) => {
         />
       </div>
       <div className={styles.categoryImage}>
-        <img src={categoryImage} />
+        <img
+          src={themes[categories[0]].img}
+          alt={categories[0]}
+          title={categories[0]}
+        />
       </div>
       {options && (
         <div className={styles.links}>
