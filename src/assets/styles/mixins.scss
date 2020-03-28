@@ -18,14 +18,14 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: unquote(repeater("1fr ", $columns-mobile));
-  grid-gap: $grid-gap-mobile;
+  gap: 0 $grid-gap-mobile;
   grid-template-columns: repeat($columns-mobile, 1fr);
   position: relative;
   width: 100%;
 
   @include fromLarge {
     -ms-grid-columns: unquote(repeater("1fr ", $columns-desktop));
-    grid-gap: $grid-gap-desktop;
+    gap: 0 $grid-gap-desktop;
     grid-template-columns: repeat($columns-desktop, 1fr);
     width: 100%;
   }
