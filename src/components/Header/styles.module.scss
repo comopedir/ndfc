@@ -64,9 +64,42 @@
   margin: 0;
 
   @include fromLarge {
-    @include grid-column-start(11);
-    @include grid-column-span(2);
+    @include grid-column-start(9);
+    @include grid-column-span(4);
   }
+}
+
+.faqbutton {
+  
+  color: var(--tertiary-color);
+  font-family: Helvetica;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  transition: ease-in-out 0.4s;
+  cursor: pointer;
+  float: right;
+  margin-top: 1rem;
+  margin-right: 2rem;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--secondary-color);
+  }
+
+  height: 4.2rem;
+  
+  @include fromLarge {
+    width: 15rem;
+    font-size: 2rem;
+    height: 6.3rem;  
+    margin-top: 0;
+    margin-right: 0;
+  }
+
 }
 
 .button {
@@ -97,6 +130,16 @@
     margin-top: 0;
   }
 }
+
+.desktopFaq {
+  padding: 2rem 3rem;
+  margin-right: 4rem;
+
+  @include onlySmall {
+    
+  }
+}
+
 
 .desktopSignup {
   padding: 2rem 3rem;

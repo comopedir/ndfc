@@ -35,6 +35,9 @@ const Header = () => {
             <line x1="7" y1="14" x2="7" stroke-width="2" />
           </svg>
         </a>
+        <a className={styles.faqbutton} href="/faq">
+          <span className={styles.desktopFAQ}>FAQ</span>
+        </a>
       </div>
     </header>
   )
