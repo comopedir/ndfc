@@ -7,7 +7,6 @@ import RestaurantHeader from "../../components/RestaurantHeader"
 import categoryImage from "../../assets/images/fish.png"
 import styles from "./styles.module.scss"
 import RestaurantOptions from "../../components/RestaurantOptions"
-import variables from "../../assets/styles/variables.scss"
 import useTheme from "../../hooks/useTheme"
 import Footer from "../../components/Footer"
 

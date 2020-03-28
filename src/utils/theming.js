@@ -11,4 +11,9 @@ export const themes = {
     secondary: variables.colorMediumVermilion,
     tertiary: variables.colorUnbleachedSilk,
   },
+  ["faq"]: {
+    primary: variables.colorFlax,
+    secondary: variables.colorMediumVermilion,
+    tertiary: variables.colorKombuGreen,
+  },
 }
