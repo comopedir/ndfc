@@ -1,8 +1,13 @@
 $color-givry: #f9d9ce;
 $color-red-damask: #e36840;
 $color-kombu-green: #34482b;
-$color-flax: #e4da97;
 $color-kenyan-copper: #7c1d0e;
+$color-medium-vermillion: #e36840;
+$color-unbleached-silk: #ffd8cc;
+$color-flax: #e4da97;
+$color-pale-pink: #f9d9d3;
+$color-blond: #fcf1be;
+$color-peach: #ffbea6;
 
 /* FONT FAMILY */
 $font-sans-serif: Helvetica, Arial, sans-serif;
@@ -39,5 +44,8 @@ $bp-large: 992px;
   colorKombuGreen: $color-kombu-green;
   colorUnbleachedSilk: $color-givry;
   colorFlax: $color-flax;
-  colorKenyanCopper: $color-kenyan-copper;
+  colorkenyanCooper: $color-kenyan-copper;
+  colorPalePink: $color-pale-pink;
+  colorBlond: $color-blond;
+  colorPeach: $color-peach;
 }
