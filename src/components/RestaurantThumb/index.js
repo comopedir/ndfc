@@ -14,18 +14,14 @@ const RestaurantThumb = ({ data }) => {
   const photo = (photos && photos.length && photos[0].thumbnails) || null
 
   return (
-    <div className={styles.container}>
+    <Link className={styles.container} to={pageNameByNode(data)}>
       {photo && (
         <div className={styles.thumbnail} key={photo.full?.url}>
-          <Link to={pageNameByNode(data)}>
-            <img src={photo.full?.url} alt={`Foto de ${name}.`} />
-          </Link>
+          <img src={photo.full?.url} alt={`Foto de ${name}.`} />
         </div>
       )}
 
-      <h3 className={styles.title}>
-        <Link to={pageNameByNode(data)}>{name}</Link>
-      </h3>
+      <h3 className={styles.title}>{name}</h3>
 
       <p className={styles.tag}>
         {categories?.map((category, index) => (
@@ -35,7 +31,7 @@ const RestaurantThumb = ({ data }) => {
           </span>
         ))}
       </p>
-    </div>
+    </Link>
   )
 }
 
