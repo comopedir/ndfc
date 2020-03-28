@@ -3,10 +3,12 @@
 .container {
   overflow: hidden;
   margin-bottom: 3rem;
-  width: grid-custom-column(3);
+  @include grid-column-span(3);
+  display: flex;
+  flex-direction: column;
 
   @include fromLarge {
-    width: grid-custom-column-desktop(4);
+    @include grid-column-span(4);
     margin-bottom: 6rem;
   }
 }
@@ -14,16 +16,16 @@
 .thumbnail {
   box-sizing: border-box;
   overflow: hidden;
-  border: solid 1rem #fff;
-  width: grid-custom-column(3);
-  height: grid-custom-column(3);
+  border: solid 0.5rem var(--tertiary-color);
+  width: 100%;
+  height: 10rem;
   margin-bottom: 1.3rem;
   transition: all 0.2s;
   cursor: pointer;
   position: relative;
 
   @include fromLarge {
-    border: solid 1rem #fff;
+    border: solid 1rem var(--tertiary-color);
     width: grid-custom-column-desktop(4);
     height: grid-custom-column-desktop(4);
     margin-bottom: 2.4rem;
@@ -48,11 +50,12 @@
   color: $color-givry;
   line-height: 1;
   font-size: 1.4rem;
-  margin: 0 0 0.6rem 0;
+  margin-top: auto;
+  margin-bottom: 0.6rem;
 
   @include fromLarge {
     font-size: 2.8rem;
-    margin: 0 0 1.5rem 0;
+    margin-bottom: 1.5rem;
   }
 }
 
