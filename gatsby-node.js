@@ -119,14 +119,16 @@ exports.createPages = ({ graphql, actions }) => {
           if (result.data && result.data.allAirtable.edges) {
             const restaurantsByCategory = result.data.allAirtable.edges.reduce(
               (accum, item) => {
-                const category = item.node.data.Categoria
-                if (item.node.data.Categoria) {
-                  if (!accum[category]) {
-                    accum[category] = [item]
-                  } else {
-                    accum[category].push(item)
+                const categories = item.node.data.Categoria || []
+                categories.forEach(category => {
+                  if (category) {
+                    if (!accum[category]) {
+                      accum[category] = [item]
+                    } else {
+                      accum[category].push(item)
+                    }
                   }
-                }
+                })
                 return accum
               },
               {}
