@@ -58,11 +58,12 @@
     color: var(--tertiary-color);
     font-weight: $font-medium;
     transition: color ease 0.3s;
+    display: inline-block;
 
     @include fromLarge {
       font-size: 2.1rem;
       font-weight: $font-light;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.4rem;
     }
 
     &:hover {
