@@ -17,7 +17,11 @@ const FAQContent = () => {
         <ul>
           <li className={styles.question}>
             <p>Como posso incluir o meu estabelecimento?</p>
-            Fácil, clique em ‘<Link to="/cadastro">Cadastrar</Link>’ :)
+            Fácil, clique em ‘
+            <a href="https://airtable.com/shrD4fU2g2GD2yzJ5" target="_blank">
+              Cadastrar
+            </a>
+            ’ :)
           </li>
           <li className={styles.question}>
             <p>Qual o preço para fazer parte?</p>É completamente de graça.
@@ -37,15 +41,41 @@ const FAQContent = () => {
           </li>
           <li className={styles.question}>
             <p>Quem está tocando essa projeto?</p>
-            <a href="https://www.instagram.com/kato78/">Kato</a>,{" "}
-            <a href="https://www.instagram.com/tbanares/">Bañares</a>,{" "}
-            <a href="https://www.instagram.com/zambrano/">Zambrano</a>,{" "}
-            <a href="https://www.instagram.com/nandico/">Nandico</a>,{" "}
-            <a href="https://www.instagram.com/bonicio/">Bonicio</a>,{" "}
-            <a href="https://www.instagram.com/renatomorenocz/">Renatão</a>,{" "}
-            <a href="https://www.instagram.com/victorbelinatti/">Belinatti</a>,{" "}
-            <a href="https://www.instagram.com/gkozlowaski/">Koz</a> e o suporte
-            de muita gente.
+            <a href="https://www.instagram.com/kato78/" target="_blank">
+              Kato
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/tbanares/" target="_blank">
+              Bañares
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/zambrano/" target="_blank">
+              Zambrano
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/nandico/" target="_blank">
+              Nandico
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/bonicio/" target="_blank">
+              Bonicio
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/renatomorenocz/" target="_blank">
+              Renatão
+            </a>
+            ,{" "}
+            <a
+              href="https://www.instagram.com/victorbelinatti/"
+              target="_blank"
+            >
+              Belinatti
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/gkozlowaski/" target="_blank">
+              Koz
+            </a>{" "}
+            e o suporte de muita gente.
           </li>
           <li className={styles.question}>
             <p>O que vocês ganham com isso?</p>A chance de voltar aos lugares
