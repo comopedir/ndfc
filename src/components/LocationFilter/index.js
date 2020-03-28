@@ -2,6 +2,8 @@ import React, { useState, useMemo, useRef, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "gatsby"
 import { pageNameByLocation } from "../../helpers"
+import arrow from "../../assets/icons/arrow.svg"
+import styles from "./styles.module.scss"
 
 const alphabeticSortFn = (a, b) => {
   const lowerCaseA = a.toLowerCase()
@@ -32,21 +34,42 @@ const LocationFilter = ({ locations = {}, city, state }) => {
     navigate(pageNameByLocation(state, e.target.value))
   }
   return (
-    <div>
-      <select onChange={handleStateChange} value={state}>
-        {sortedStates.map(item => (
-          <option key={item} value={item}>
-            {item}
-          </option>
-        ))}
-      </select>
-      <select ref={cityRef} onChange={handleCityChange} value={city}>
-        {sortedCities.map(item => (
-          <option key={item} value={item}>
-            {item}
-          </option>
-        ))}
-      </select>
+    <div className={styles.container}>
+      <div className={styles.selectContainer}>
+        <button className={styles.button}>
+          {state}
+          <img src={arrow} />
+        </button>
+        <select
+          className={styles.select}
+          onChange={handleStateChange}
+          value={state}
+        >
+          {sortedStates.map(item => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className={styles.selectContainer}>
+        <button className={styles.button}>
+          {city}
+          <img src={arrow} />
+        </button>
+        <select
+          className={styles.select}
+          ref={cityRef}
+          onChange={handleCityChange}
+          value={city}
+        >
+          {sortedCities.map(item => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   )
 }
