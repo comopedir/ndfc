@@ -1,5 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useMemo, useRef } from "react"
 import { navigate } from "gatsby"
 import { pageNameByLocation } from "../../helpers"
 import arrow from "../../assets/icons/arrow.svg"
@@ -19,7 +18,6 @@ const LocationFilter = ({ locations = {}, city, state }) => {
   )
 
   const handleStateChange = e => {
-    const value = e.target.value
     navigate(pageNameByLocation(e.target.value, locations[e.target.value][0]))
   }
 
@@ -31,7 +29,7 @@ const LocationFilter = ({ locations = {}, city, state }) => {
       <div className={styles.selectContainer}>
         <button className={styles.button}>
           {state}
-          <img src={arrow} />
+          <img src={arrow} alt=">" />
         </button>
         <select
           className={styles.select}
@@ -48,7 +46,7 @@ const LocationFilter = ({ locations = {}, city, state }) => {
       <div className={styles.selectContainer}>
         <button className={styles.button}>
           {city}
-          <img src={arrow} />
+          <img src={arrow} alt=">" />
         </button>
         <select
           className={styles.select}

@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import RestaurantThumb from "../RestaurantThumb"
 import LocationFilter from "../LocationFilter"
 import CategoryFilter from "../CategoryFilter"

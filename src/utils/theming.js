@@ -54,6 +54,7 @@ const themeColors = {
   },
 }
 
+/* eslint-disable no-useless-computed-key */
 export const themes = {
   ["Italiana"]: {
     ...themeColors.blond,
@@ -170,3 +171,4 @@ export const themes = {
     ...themeColors.flax,
   },
 }
+/* eslint-disable no-useless-computed-key */

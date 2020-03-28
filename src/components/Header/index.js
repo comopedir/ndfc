@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import logofood from "../../images/symbol-avocado.png"
 
 import styles from "./styles.module.scss"
 

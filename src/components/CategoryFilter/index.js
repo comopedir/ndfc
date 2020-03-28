@@ -33,7 +33,7 @@ const CategoryFilter = ({
       <div className={styles.selectContainer}>
         <button className={styles.button}>
           {selectedCategory}
-          <img src={arrow} />
+          <img src={arrow} alt=">" />
         </button>
         <select
           className={styles.select}
