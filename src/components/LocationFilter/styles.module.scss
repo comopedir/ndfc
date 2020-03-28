@@ -1,0 +1,48 @@
+@import "includes";
+
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.selectContainer {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:nth-child(2) {
+    margin-left: 2rem;
+  }
+}
+
+.select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.connector,
+.button {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: var(--tertiary-color);
+
+  @include fromLarge {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+  }
+}
+
+.button {
+  background: none;
+  border: none;
+  font-weight: 300;
+  padding: 10px;
+  margin: -10px;
+
+  & > img {
+    margin-left: 10px;
+  }
+}

@@ -9,12 +9,6 @@ const RestaurantList = ({ restaurants = [], city, state, locations }) => (
   <div className={styles.container}>
     <div className={styles.citys}>
       <LocationFilter locations={locations} city={city} state={state} />
-      <a href="#">
-        {city}, {state}
-      </a>
-      <p className={styles.subtitle}>
-        {restaurants.length} lugares que não vamos deixar fechar
-      </p>
     </div>
 
     <div className={styles.list}>
