@@ -4,7 +4,6 @@ import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
 import RestaurantHeader from "../../components/RestaurantHeader"
 
-import categoryImage from "../../assets/images/fish.png"
 import styles from "./styles.module.scss"
 import RestaurantOptions from "../../components/RestaurantOptions"
 import useTheme from "../../hooks/useTheme"
@@ -45,7 +44,7 @@ const RestaurantPage = ({ pageContext }) => {
       </div>
       <div className={styles.categoryImage}>
         <img
-          src={themes[categories[0]].img}
+          src={themes[categories[0]] ? themes[categories[0]].img : ""}
           alt={categories[0]}
           title={categories[0]}
         />

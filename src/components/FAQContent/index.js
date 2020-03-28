@@ -1,5 +1,6 @@
 import React from "react"
 import useTheme from "../../hooks/useTheme"
+import { Link } from "gatsby"
 
 import styles from "./styles.module.scss"
 
@@ -16,7 +17,7 @@ const FAQContent = () => {
         <ul>
           <li className={styles.question}>
             <p>Como posso incluir o meu estabelecimento?</p>
-            Fácil, clique em ‘<a href="#">Cadastrar</a>’ :)
+            Fácil, clique em ‘<Link to="/cadastro">Cadastrar</Link>’ :)
           </li>
           <li className={styles.question}>
             <p>Qual o preço para fazer parte?</p>É completamente de graça.
@@ -36,11 +37,15 @@ const FAQContent = () => {
           </li>
           <li className={styles.question}>
             <p>Quem está tocando essa projeto?</p>
-            <a href="#">Kato</a>, <a href="#">Bañares</a>,{" "}
-            <a href="#">Zambrano</a>, <a href="#">Nandico</a>,{" "}
-            <a href="#">Bonicio</a>, <a href="#">Renatão</a>,{" "}
-            <a href="#">Belinatti</a>, <a href="#">Koz</a> e o suporte de muita
-            gente.
+            <a href="https://www.instagram.com/kato78/">Kato</a>,{" "}
+            <a href="https://www.instagram.com/tbanares/">Bañares</a>,{" "}
+            <a href="https://www.instagram.com/zambrano/">Zambrano</a>,{" "}
+            <a href="https://www.instagram.com/nandico/">Nandico</a>,{" "}
+            <a href="https://www.instagram.com/bonicio/">Bonicio</a>,{" "}
+            <a href="https://www.instagram.com/renatomorenocz/">Renatão</a>,{" "}
+            <a href="https://www.instagram.com/victorbelinatti/">Belinatti</a>,{" "}
+            <a href="https://www.instagram.com/gkozlowaski/">Koz</a> e o suporte
+            de muita gente.
           </li>
           <li className={styles.question}>
             <p>O que vocês ganham com isso?</p>A chance de voltar aos lugares
