@@ -8,13 +8,18 @@ import useTheme from "../../hooks/useTheme"
 
 import styles from "./styles.module.scss"
 
-const IndexPage = () => {
+const IndexPage = ({ pageContext: { data, city, state, locations } }) => {
   useTheme("home")
 
   return (
     <Layout>
       <SEO title="Home" />
-      <RestaurantList />
+      <RestaurantList
+        restaurants={data}
+        city={city}
+        state={state}
+        locations={locations}
+      />
       <div className={styles.footer}>
         <Footer />
       </div>
