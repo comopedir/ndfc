@@ -28,3 +28,7 @@ module.exports.pageNameByLocation = function(state, city) {
     city.replace(/\s/g, "-").toLowerCase()
   )}`
 }
+
+module.exports.pageNameWithCategory = function(name, category) {
+  return `${name}/${removeAccents(category.replace(/\s/g, "-").toLowerCase())}`
+}

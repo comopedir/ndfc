@@ -8,7 +8,9 @@ import useTheme from "../../hooks/useTheme"
 
 import styles from "./styles.module.scss"
 
-const IndexPage = ({ pageContext: { data, city, state, locations } }) => {
+const IndexPage = ({
+  pageContext: { data, city, state, locations, categories, category },
+}) => {
   useTheme("home")
 
   return (
@@ -19,6 +21,8 @@ const IndexPage = ({ pageContext: { data, city, state, locations } }) => {
         city={city}
         state={state}
         locations={locations}
+        categories={categories}
+        category={category}
       />
       <div className={styles.footer}>
         <Footer />

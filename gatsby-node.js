@@ -117,6 +117,20 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }`).then(result => {
           if (result.data && result.data.allAirtable.edges) {
+            const restaurantsByCategory = result.data.allAirtable.edges.reduce(
+              (accum, item) => {
+                const category = item.node.data.Categoria
+                if (item.node.data.Categoria) {
+                  if (!accum[category]) {
+                    accum[category] = [item]
+                  } else {
+                    accum[category].push(item)
+                  }
+                }
+                return accum
+              },
+              {}
+            )
             const pagePath = helpers.pageNameByLocation(state, city)
             const component = path.resolve("./src/components/Home/index.js")
             const context = {
@@ -124,6 +138,7 @@ exports.createPages = ({ graphql, actions }) => {
               city: city,
               state: state,
               locations: locations,
+              categories: Object.keys(restaurantsByCategory),
             }
 
             if (city === "São Paulo" && state === "SP") {
@@ -132,12 +147,36 @@ exports.createPages = ({ graphql, actions }) => {
                 component,
                 context,
               })
+
+              Object.keys(restaurantsByCategory).forEach(category => {
+                createPage({
+                  path: helpers.pageNameWithCategory("/", category),
+                  component,
+                  context: {
+                    ...context,
+                    data: restaurantsByCategory[category],
+                    category,
+                  },
+                })
+              })
             }
 
             createPage({
               path: pagePath,
               component,
               context,
+            })
+
+            Object.keys(restaurantsByCategory).forEach(category => {
+              createPage({
+                path: helpers.pageNameWithCategory(pagePath, category),
+                component,
+                context: {
+                  ...context,
+                  data: restaurantsByCategory[category],
+                  category,
+                },
+              })
             })
           }
         })
