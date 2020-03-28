@@ -4,24 +4,17 @@ import { navigate } from "gatsby"
 import { pageNameByLocation } from "../../helpers"
 import arrow from "../../assets/icons/arrow.svg"
 import styles from "./styles.module.scss"
-
-const alphabeticSortFn = (a, b) => {
-  const lowerCaseA = a.toLowerCase()
-  const lowerCaseB = b.toLowerCase()
-  if (lowerCaseA < lowerCaseB) return -1
-  if (lowerCaseA > lowerCaseB) return 1
-  return 0
-}
+import { alphabeticSortArray } from "../../utils/array"
 
 const LocationFilter = ({ locations = {}, city, state }) => {
   const cityRef = useRef(null)
   const sortedStates = useMemo(
-    () => Object.keys(locations).sort(alphabeticSortFn),
+    () => alphabeticSortArray(Object.keys(locations)),
     [locations]
   )
 
   const sortedCities = useMemo(
-    () => (locations[state] ? locations[state].sort(alphabeticSortFn) : []),
+    () => (locations[state] ? alphabeticSortArray(locations[state]) : []),
     [locations, state]
   )
 
