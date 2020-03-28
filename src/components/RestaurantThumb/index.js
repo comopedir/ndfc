@@ -23,7 +23,10 @@ const RestaurantThumb = ({ data }) => {
         </div>
       )}
 
-      <h3 className={styles.title}>{name}</h3>
+      <h3 className={styles.title}>
+        <Link to={pageNameByNode(data)}>{name}</Link>
+      </h3>
+
       <p className={styles.tag}>
         {categories?.map((category, index) => (
           <span key={category}>
