@@ -17,7 +17,8 @@
     order: -1;
 
     & > img {
-      width: 12rem;
+      max-height: 10rem;
+      max-width: 12rem;
       bottom: 40px;
     }
   }

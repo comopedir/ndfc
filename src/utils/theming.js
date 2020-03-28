@@ -104,7 +104,7 @@ export const themes = {
     ...themeColors.palePink,
     img: imgDrinks,
   },
-  ["Bebida"]: {
+  ["Bebidas"]: {
     ...themeColors.palePink,
     img: imgDrinks,
   },
