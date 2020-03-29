@@ -153,8 +153,8 @@ export const themes = {
     img: imgLanches,
   },
   ["Padaria"]: {
-    ...themeColors.blond,
-    img: imgLanches,
+    ...themeColors.kenyanCopper,
+    img: imgCafe,
   },
   ["Sanduíches"]: {
     ...themeColors.blond,
