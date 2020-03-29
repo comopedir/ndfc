@@ -1,66 +1,37 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
 import RestaurantThumb from "../RestaurantThumb"
+import LocationFilter from "../LocationFilter"
+import CategoryFilter from "../CategoryFilter"
 
-const RestaurantList = () => {
-  const data = useStaticQuery(graphql`
-    query RestaurantList {
-      allAirtable {
-        edges {
-          node {
-            id
-            data {
-              Estado
-              Website
-              WhatsApp
-              Observa__es
-              Cidade
-              Email
-              Nome_do_Estabelecimento
-              Doa__es
-              Categoria
-              Como_Pedir
-              Servi_os
-              Foto_da_Comida {
-                filename
-                thumbnails {
-                  full {
-                    url
-                    height
-                    width
-                  }
-                }
-                url
-              }
-              Instagram
-            }
-          }
-        }
-      }
-    }
-  `)
+import styles from "./styles.module.scss"
 
-  const { edges: restaurants } = data.allAirtable;
-
-  return (
-    <div>
-      {restaurants.length} lugares que não vamos deixar fechar
-      {
-        restaurants.map( restaurant => {          
-          const { id, data } = restaurant.node;
-
-          return (
-            <RestaurantThumb
-              key={id}
-              data={data}
-            />
-          )
-        })
-      }
+const RestaurantList = ({
+  restaurants = [],
+  city,
+  state,
+  locations,
+  category,
+  categories,
+}) => (
+  <div className={styles.container}>
+    <div className={styles.filters}>
+      <CategoryFilter
+        categories={categories}
+        category={category}
+        city={city}
+        state={state}
+      />
+      <LocationFilter locations={locations} city={city} state={state} />
     </div>
-  )
 
-}
+    <div className={styles.list}>
+      {restaurants.map(restaurant => {
+        const { id, data } = restaurant.node
+
+        return <RestaurantThumb key={id} data={data} />
+      })}
+    </div>
+  </div>
+)
 
 export default RestaurantList

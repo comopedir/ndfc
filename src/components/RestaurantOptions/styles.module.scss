@@ -1,0 +1,74 @@
+@import "includes";
+
+.container {
+  @include grid();
+}
+
+.button {
+  @include grid-column-span(3);
+  height: 7.8rem;
+  padding: 1.4rem;
+  text-decoration: none;
+  color: var(--tertiary-color);
+  outline: 0.4rem solid var(--tertiary-color);
+  outline-offset: -0.4rem;
+  display: flex;
+  align-items: flex-end;
+  transition: all 200ms ease;
+  margin-bottom: 1.5rem;
+
+  &.withBackground {
+    background-color: var(--secondary-color);
+    outline: 0.4rem solid var(--secondary-color);
+  }
+
+  @include fromLarge {
+    @include grid-column-span(4);
+    height: 17.6rem;
+    padding: 1.8rem 2.6rem;
+    margin-bottom: 2.9rem;
+  }
+}
+
+a.button:hover {
+  @include fromLarge {
+    outline: 1rem solid var(--tertiary-color);
+    outline-offset: -1rem;
+  }
+}
+
+.service {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-top: auto;
+  width: 100%;
+
+  > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include fromLarge {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+
+    > p:nth-child(2) {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      margin-top: 0.7rem;
+    }
+  }
+
+  > p:nth-child(2) {
+    font-weight: bold;
+    margin-top: 0.3rem;
+  }
+
+  > .label {
+    display: none;
+
+    @include fromLarge {
+      display: inline;
+    }
+  }
+}

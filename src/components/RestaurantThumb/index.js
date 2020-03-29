@@ -1,34 +1,38 @@
 import React from "react"
+import { Link } from "gatsby"
+import { pageNameByNode } from "../../helpers"
 
-const RestaurantThumb = ({data}) => {
+import styles from "./styles.module.scss"
+
+const RestaurantThumb = ({ data }) => {
   const {
     Foto_da_Comida: photos,
     Nome_do_Estabelecimento: name,
     Categoria: categories,
-  } = data;
+  } = data
+
+  const photo = (photos && photos.length && photos[0].thumbnails) || null
 
   return (
-    <div>
-      {
-        photos.map( photo => {
-          const { thumbnails } = photo;
-          return (
-            <div key={thumbnails.full.url}>
-              <img src={thumbnails.full.url} width="200" alt={`Foto de ${name}.`} />
-            </div>
-          )
-        })
-      }
-      <h3>{name}</h3>
-      <p>
-        {
-          categories.map( category => (
-            <span key={category}>{category}</span>
-          ))
-        }
+    <Link className={styles.container} to={pageNameByNode(data)}>
+      {photo && (
+        <div className={styles.thumbnail} key={photo.large?.url}>
+          <img src={photo.large?.url} alt={`Foto de ${name}.`} />
+        </div>
+      )}
+
+      <h3 className={styles.title}>{name}</h3>
+
+      <p className={styles.tag}>
+        {categories?.map((category, index) => (
+          <span key={category}>
+            {category}
+            {index < categories.length - 1 && ","}{" "}
+          </span>
+        ))}
       </p>
-    </div>
+    </Link>
   )
 }
 
-export default RestaurantThumb;
+export default RestaurantThumb

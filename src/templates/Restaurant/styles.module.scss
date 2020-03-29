@@ -1,0 +1,92 @@
+@import "includes";
+
+.header {
+  @include grid-column-span($grid-columns-mobile);
+  @include grid-column-start(1);
+
+  @include fromLarge {
+    @include grid-column-span(9);
+  }
+}
+
+.categoryImage {
+  @include grid-column-span($grid-columns-mobile);
+  @include grid-column-start(1);
+
+  @include onlySmall {
+    order: -1;
+
+    & > img {
+      max-height: 10rem;
+      max-width: 12rem;
+      bottom: 20px;
+    }
+  }
+
+  @include fromLarge {
+    @include grid-column-span(3);
+    @include grid-column-start(10);
+
+    & > img {
+      bottom: 0;
+      max-height: 31rem;
+      max-width: grid-custom-column-desktop(2.5);
+    }
+  }
+  position: relative;
+
+  & > img {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.links {
+  @include grid-column-start(1);
+  @include grid-column-span($grid-columns-mobile);
+  margin-top: 2.7rem;
+
+  @include fromLarge {
+    @include grid-column-span($grid-columns-desktop);
+    margin-top: 5.8rem;
+  }
+}
+
+.pictures {
+  @include grid-column-start(1);
+  @include grid-column-span($grid-columns-mobile);
+
+  @include fromLarge {
+    @include grid-column-span($grid-columns-desktop);
+    margin-top: 10rem;
+  }
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.picturesTitle {
+  color: var(--tertiary-color);
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+
+  @include fromLarge {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+  }
+}
+
+.picture {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.footer {
+  @include grid-column-span($grid-columns-mobile);
+  @include grid-column-start(1);
+  margin-top: 8rem;
+
+  @include fromLarge {
+    @include grid-column-span($grid-columns-desktop);
+  }
+}

@@ -8,22 +8,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import "./layout.css"
+import "normalize.css"
+import "../../assets/styles/main.scss"
+import styles from "./styles.module.scss"
+import Header from "../../components/Header"
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer></footer>
-      </div>
-    </>
+    <div className={styles.container}>
+      <Header />
+      <main className="grid">{children}</main>
+      <footer></footer>
+    </div>
   )
 }
 

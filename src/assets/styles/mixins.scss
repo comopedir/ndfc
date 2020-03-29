@@ -1,0 +1,71 @@
+@mixin onlySmall {
+  @media only screen and (max-width: $bp-large) {
+    @content;
+  }
+}
+
+@mixin fromLarge {
+  @media only screen and (min-width: $bp-large) {
+    @content;
+  }
+}
+
+/* Grid System */
+@mixin grid(
+  $columns-mobile: $grid-columns-mobile,
+  $columns-desktop: $grid-columns-desktop
+) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: unquote(repeater("1fr ", $columns-mobile));
+  gap: 0 $grid-gap-mobile;
+  grid-template-columns: repeat($columns-mobile, 1fr);
+  position: relative;
+  width: 100%;
+
+  @include fromLarge {
+    -ms-grid-columns: unquote(repeater("1fr ", $columns-desktop));
+    gap: 0 $grid-gap-desktop;
+    grid-template-columns: repeat($columns-desktop, 1fr);
+    width: 100%;
+  }
+}
+
+@mixin grid-column-span($cols) {
+  grid-column-end: span $cols;
+  -ms-grid-column-span: $cols;
+}
+
+@mixin grid-row-span($rows) {
+  grid-row-end: span $rows;
+  -ms-grid-rows-span: $rows;
+}
+
+@mixin grid-column-start($cols) {
+  -ms-grid-column: $cols;
+  grid-column-start: $cols;
+}
+
+@mixin grid-row-start($rows) {
+  -ms-grid-row: $rows;
+  grid-row-start: $rows;
+}
+
+@function grid-custom-column($cols, $grid-columns: $grid-columns-mobile) {
+  $multiplier: $cols / $grid-columns;
+  @return calc(
+    (100vw - (#{$body-margin-mobile} * 2)) * #{$multiplier} - #{$grid-gap-mobile} *
+      (1 - #{$multiplier})
+  );
+}
+
+@function grid-custom-column-desktop(
+  $cols,
+  $grid-columns: $grid-columns-desktop
+) {
+  $multiplier: $cols / $grid-columns;
+  @return calc(
+    (100vw - (#{$body-margin-desktop} * 2)) * #{$multiplier} - #{$grid-gap-desktop} *
+      (1 - #{$multiplier})
+  );
+}

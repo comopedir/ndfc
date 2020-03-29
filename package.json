@@ -7,23 +7,33 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
+    "classnames": "^2.2.6",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
+    "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-mdx": "^1.1.1",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-s3": "^0.3.3",
+    "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-plugin-webfonts": "^1.1.2",
     "gatsby-source-airtable": "^2.1.0",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "remove-accents": "^0.4.2",
+    "window-or-global": "^1.0.1"
   },
   "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.9",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -39,6 +49,17 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby-plugin-s3 deploy"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
