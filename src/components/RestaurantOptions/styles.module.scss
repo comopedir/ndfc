@@ -31,8 +31,10 @@
 }
 
 a.button:hover {
-  outline: 1rem solid var(--tertiary-color);
-  outline-offset: -1rem;
+  @include fromLarge {
+    outline: 1rem solid var(--tertiary-color);
+    outline-offset: -1rem;
+  }
 }
 
 .service {
