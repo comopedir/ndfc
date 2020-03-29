@@ -70,7 +70,6 @@
 }
 
 .faqbutton {
-  
   color: var(--tertiary-color);
   font-family: Helvetica;
   font-size: 1.4rem;
@@ -91,20 +90,19 @@
   }
 
   height: 4.2rem;
-  
+
   @include fromLarge {
     width: 15rem;
     font-size: 2rem;
-    height: 6.3rem;  
+    height: 6.3rem;
     margin-top: 0;
     margin-right: 0;
   }
-
 }
 
 .button {
   background-color: var(--secondary-color);
-  color: var(--tertiary-color);
+  color: $color-givry;
   font-family: Helvetica;
   font-size: 1.4rem;
   display: flex;
@@ -136,10 +134,8 @@
   margin-right: 4rem;
 
   @include onlySmall {
-    
   }
 }
-
 
 .desktopSignup {
   padding: 2rem 3rem;
@@ -151,7 +147,7 @@
 
 .mobileSignup {
   padding: 1.4rem;
-  stroke: var(--tertiary-color);
+  stroke: $color-givry;
 
   @include fromLarge {
     display: none;
