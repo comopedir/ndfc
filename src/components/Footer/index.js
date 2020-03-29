@@ -15,14 +15,14 @@ const Footer = () => {
       </div>
       <div className={styles.content}>
         <a
-          className={styles.contact}
+          className={styles.faqlink}
           href="https://airtable.com/shrD4fU2g2GD2yzJ5"
           target="_blank"
         >
           Cadastrar
         </a>
         <a
-          className={styles.contact}
+          className={styles.faqlink}
           href="mailto:naodeixefecharaconta@gmail.com"
         >
           Contato
