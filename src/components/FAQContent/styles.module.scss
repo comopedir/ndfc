@@ -3,9 +3,10 @@
 .container {
   @include grid;
   @include grid-column-start(1);
-  @include grid-column-span(12);
+  @include grid-column-span($grid-columns-mobile);
 
   @include fromLarge {
+    @include grid-column-span($grid-columns-desktop);
     margin-top: -4rem;
     margin-bottom: 20rem;
   }
