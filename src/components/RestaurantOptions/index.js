@@ -37,6 +37,11 @@ const RestaurantOptions = ({
     optionsWithServices.push("DM no Instagram")
   }
 
+  // Add website based in info availability rather than tagged as an option
+  if (website && !optionsWithServices.find(item => item === "Website")) {
+    optionsWithServices.push("Website")
+  }
+
   return (
     <div className={styles.container}>
       {optionsWithServices
