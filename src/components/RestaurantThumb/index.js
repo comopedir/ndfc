@@ -26,7 +26,7 @@ const RestaurantThumb = ({ data }) => {
       <p className={styles.tag}>
         {categories?.map((category, index) => (
           <span key={category}>
-            {category.toLowerCase()}
+            {category}
             {index < categories.length - 1 && ","}{" "}
           </span>
         ))}
