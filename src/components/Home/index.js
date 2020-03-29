@@ -7,6 +7,7 @@ import Footer from "../Footer"
 import useTheme from "../../hooks/useTheme"
 
 import styles from "./styles.module.scss"
+import { themes } from "../../utils/theming"
 
 const IndexPage = ({
   pageContext: { data, city, state, locations, categories, category },
@@ -15,7 +16,7 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" theme={themes.home.primary} />
       <RestaurantList
         restaurants={data}
         city={city}
