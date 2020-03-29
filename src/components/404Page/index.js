@@ -11,7 +11,7 @@ import themes from "../../utils/theming"
 const NotFoundPage = () => {
   return (
     <Layout>
-      <SEO title="Página não encontrada" theme={themes.home.primary} />
+      <SEO title="Página não encontrada" theme={themes.faq.primary} />
       <PageNotFoundContent />
       <div className={styles.footer}>
         <Footer />
