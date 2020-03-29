@@ -8,7 +8,12 @@ const Footer = () => {
         <p className={styles.contact}>@naodeixefecharaconta</p>
         <p className={styles.contact}>#naodeixefecharaconta</p>
       </div>
-      <p className={styles.contact}>Contato</p>
+      <a
+        className={styles.contact}
+        href="mailto:naodeixefecharaconta@gmail.com"
+      >
+        Contato
+      </a>
     </div>
   )
 }
