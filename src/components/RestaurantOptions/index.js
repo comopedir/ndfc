@@ -23,6 +23,9 @@ const RestaurantOptions = ({
   website,
   services = [],
   name,
+  ifoodLink,
+  rappiLink,
+  uberEatsLink,
 }) => {
   const optionsWithServices = useMemo(
     () => (services.length ? options.concat(["Serviços"]) : options),
@@ -56,15 +59,21 @@ const RestaurantOptions = ({
           let href
           switch (option) {
             case "iFood":
-              const searchUrl = "https://www.ifood.com.br/busca?q="
-              if (name) {
+              if (ifoodLink && ifoodLink !== "Sem resultado") {
+                href = ifoodLink
+              } else {
+                const searchUrl = "https://www.ifood.com.br/busca?q="
                 href = `${searchUrl}${encodeURIComponent(name)}`
               }
               break
             case "Rappi":
-              href = `https://www.rappi.com.br/search?store_type=all&query=${encodeURIComponent(
-                name
-              )}`
+              if (rappiLink && rappiLink !== "Sem resultado") {
+                href = rappiLink
+              } else {
+                href = `https://www.rappi.com.br/search?store_type=all&query=${encodeURIComponent(
+                  name
+                )}`
+              }
               break
             case "Whatsapp":
               if (wpp) {
@@ -88,6 +97,10 @@ const RestaurantOptions = ({
               href = website
               break
             case "Uber Eats":
+              href =
+                uberEatsLink && uberEatsLink !== "Sem resultado"
+                  ? uberEatsLink
+                  : null
             case "James Delivery":
             default:
               break

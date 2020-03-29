@@ -6,7 +6,10 @@ exports.createPages = ({ graphql, actions }) => {
 
   const restaurantResults = graphql(`
     query RestaurantList {
-      allAirtable(filter: { data: { Aprovado_: { eq: "Sim" } } }) {
+      allAirtable(
+        filter: { data: { Aprovado_: { eq: "Sim" } } }
+        sort: { fields: [data___Nome_do_Estabelecimento], order: ASC }
+      ) {
         edges {
           node {
             id
@@ -34,6 +37,9 @@ exports.createPages = ({ graphql, actions }) => {
                 url
               }
               Instagram
+              Link_do_iFood
+              Link_do_Rappi
+              Link_do_UberEats
             }
           }
         }
@@ -83,7 +89,10 @@ exports.createPages = ({ graphql, actions }) => {
       locations[state].forEach(city => {
         const restaurantsByLocation = graphql(`
           query RestaurantList {
-            allAirtable(filter: { data: { Aprovado_: { eq: "Sim" }, Cidade: { regex: "/${city}/i" }, Estado: { regex: "/${state}/i" } } }) {
+            allAirtable(filter: { data: { Aprovado_: { eq: "Sim" }, Cidade: { regex: "/${city}/i" }, Estado: { regex: "/${state}/i" } } }, sort: {
+              fields: [data___Nome_do_Estabelecimento]
+              order: ASC
+            }) {
               edges {
                 node {
                   id
@@ -111,6 +120,9 @@ exports.createPages = ({ graphql, actions }) => {
                       url
                     }
                     Instagram
+                    Link_do_iFood
+                    Link_do_Rappi
+                    Link_do_UberEats
                   }
                 }
               }
