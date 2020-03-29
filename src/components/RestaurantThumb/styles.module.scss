@@ -17,7 +17,7 @@
         outline: 1rem solid var(--secondary-color);
         outline-offset: -1rem;
       }
-  
+
       .title,
       .tag {
         color: var(--secondary-color);
@@ -34,7 +34,7 @@
   outline: 0.4rem solid var(--tertiary-color);
   overflow: hidden;
   position: relative;
-  transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.2s;
   width: 100%;
   display: inline-flex;
   height: 18rem;
@@ -62,7 +62,7 @@
   text-decoration: none;
   color: var(--tertiary-color);
   font-weight: $font-medium;
-  transition: color ease-in-out 0.4s;
+  transition: color ease-in-out 0.2s;
   display: inline-block;
 
   @include fromLarge {
@@ -77,7 +77,7 @@
   line-height: 1;
   font-family: $font-sans-serif;
   color: var(--tertiary-color);
-  transition: color ease-in-out 0.4s;
+  transition: color ease-in-out 0.2s;
   margin: 0;
 
   @include fromLarge {
