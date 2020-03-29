@@ -48,7 +48,7 @@ const RestaurantOptions = ({
             break
           case "Whatsapp":
             if (wpp) {
-              href = `whatsapp://send?&phone=${wpp.replace(/\D*/g, "")}`
+              href = `whatsapp://send?&phone=+55${wpp.replace(/\D*/g, "")}`
             }
             break
           case "Telefone":
