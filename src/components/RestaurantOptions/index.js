@@ -62,17 +62,14 @@ const RestaurantOptions = ({
               if (ifoodLink && ifoodLink !== "Sem resultado") {
                 href = ifoodLink
               } else {
-                const searchUrl = "https://www.ifood.com.br/busca?q="
-                href = `${searchUrl}${encodeURIComponent(name)}`
+                href = "https://www.ifood.com.br/"
               }
               break
             case "Rappi":
               if (rappiLink && rappiLink !== "Sem resultado") {
                 href = rappiLink
               } else {
-                href = `https://www.rappi.com.br/search?store_type=all&query=${encodeURIComponent(
-                  name
-                )}`
+                href = "https://www.rappi.com.br/"
               }
               break
             case "Whatsapp":
@@ -100,8 +97,11 @@ const RestaurantOptions = ({
               href =
                 uberEatsLink && uberEatsLink !== "Sem resultado"
                   ? uberEatsLink
-                  : null
+                  : "https://www.ubereats.com/br"
+              break
             case "James Delivery":
+              href = "https://jamesdelivery.com.br/"
+              break
             default:
               break
           }
