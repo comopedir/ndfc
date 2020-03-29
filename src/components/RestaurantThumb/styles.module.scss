@@ -11,17 +11,17 @@
   @include fromLarge {
     @include grid-column-span(4);
     margin-bottom: 3.7rem;
-  }
 
-  &:hover {
-    .thumbnail {
-      outline: 1rem solid var(--secondary-color);
-      outline-offset: -1rem;
-    }
-
-    .title,
-    .tag {
-      color: var(--secondary-color);
+    &:hover {
+      .thumbnail {
+        outline: 1rem solid var(--secondary-color);
+        outline-offset: -1rem;
+      }
+  
+      .title,
+      .tag {
+        color: var(--secondary-color);
+      }
     }
   }
 }
