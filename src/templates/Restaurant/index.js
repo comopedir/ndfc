@@ -80,8 +80,8 @@ const RestaurantPage = ({ pageContext }) => {
             <img
               key={item.url}
               className={styles.picture}
-              src={item.url}
-              alt={item.filename}
+              src={item.thumbnails.large.url}
+              alt={`Imagem ilustrativa de cardápio (${restaurantName}).`}
             />
           ))}
         </div>
