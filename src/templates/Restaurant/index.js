@@ -27,6 +27,9 @@ const RestaurantPage = ({ pageContext }) => {
     Instagram: instagram,
     Telefone_para_Pedidos: phone,
     Servi_os: services,
+    Link_do_iFood: ifoodLink,
+    Link_do_Rappi: rappiLink,
+    Link_do_UberEats: uberEatsLink,
   } = data
 
   useTheme(categories[0])
@@ -62,6 +65,9 @@ const RestaurantPage = ({ pageContext }) => {
             wpp={wpp}
             services={services}
             name={restaurantName}
+            ifoodLink={ifoodLink}
+            uberEatsLink={uberEatsLink}
+            rappiLink={rappiLink}
           />
         </div>
       )}

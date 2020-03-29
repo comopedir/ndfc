@@ -37,6 +37,9 @@ exports.createPages = ({ graphql, actions }) => {
                 url
               }
               Instagram
+              Link_do_iFood
+              Link_do_Rappi
+              Link_do_UberEats
             }
           }
         }
@@ -117,6 +120,9 @@ exports.createPages = ({ graphql, actions }) => {
                       url
                     }
                     Instagram
+                    Link_do_iFood
+                    Link_do_Rappi
+                    Link_do_UberEats
                   }
                 }
               }
