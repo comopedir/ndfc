@@ -33,7 +33,10 @@ const RestaurantPage = ({ pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Restaurante" theme={themes[categories[0]].primary} />
+      <SEO
+        title={`${restaurantName} | Restaurante`}
+        theme={themes[categories[0]].primary}
+      />
       <div className={styles.header}>
         <RestaurantHeader
           name={restaurantName}
