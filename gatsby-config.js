@@ -7,6 +7,8 @@ module.exports = {
     title: `Não deixe fechar a conta`,
     description: `Iniciativa aberta de apoio a restaurantes brasileiros durante a crise COVID-19.`,
     author: `@naodeixefecharaconta`,
+    url: `https://naodeixefecharaconta.com.br`,
+    image: `src/images/ndfac_ico.png`,
   },
   plugins: [
     {
