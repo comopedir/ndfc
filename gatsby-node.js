@@ -25,7 +25,12 @@ exports.createPages = ({ graphql, actions }) => {
               Foto_da_Comida {
                 filename
                 thumbnails {
-                  full {
+                  small {
+                    url
+                    height
+                    width
+                  }
+                  large {
                     url
                     height
                     width
@@ -102,7 +107,12 @@ exports.createPages = ({ graphql, actions }) => {
                     Foto_da_Comida {
                       filename
                       thumbnails {
-                        full {
+                        small {
+                          url
+                          height
+                          width
+                        }
+                        large {
                           url
                           height
                           width
