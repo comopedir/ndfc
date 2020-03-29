@@ -1,5 +1,5 @@
 import variables from "../assets/styles/variables.scss"
-import imgAsiatica from "../assets/images/asiatica.png"
+import imgAsiatica from "../assets/images/asiaticab.png"
 import imgCafe from "../assets/images/cafe.png"
 import imgCarnes from "../assets/images/carnes.png"
 import imgDrinks from "../assets/images/drinks.png"
