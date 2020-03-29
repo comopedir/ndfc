@@ -30,5 +30,21 @@
 
 a{
   text-decoration: none;
+}
+
+.faqlink {
+  color: var(--tertiary-color);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-decoration: none;
   text-align: right;
+
+  @include fromLarge {
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
 }
