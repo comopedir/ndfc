@@ -2,16 +2,17 @@ import React from "react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
+import PageNotFoundContent from "../components/PageNotFoundContent"
+import Footer from "../components/Footer"
 
-import Jokes from "../content/jokes.mdx"
-
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Página não encontrada" />
-    <h1>Página não encontrada</h1>
-    <p>Mas já que você está aqui, não perca a viagem:</p>
-    <Jokes />
-  </Layout>
-)
+const NotFoundPage = () => {
+  return (
+    <Layout>
+      <SEO title="Página não encontrada" />
+      <PageNotFoundContent />
+      <Footer />
+    </Layout>
+  )
+}
 
 export default NotFoundPage
