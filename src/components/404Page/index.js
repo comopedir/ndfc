@@ -9,15 +9,7 @@ import styles from "./styles.module.scss"
 import themes from "../../utils/theming"
 
 const NotFoundPage = () => {
-  return (
-    <Layout>
-      <SEO title="Página não encontrada" theme={themes.faq.primary} />
-      <PageNotFoundContent />
-      <div className={styles.footer}>
-        <Footer />
-      </div>
-    </Layout>
-  )
+  return <Layout>404</Layout>
 }
 
 export default NotFoundPage
