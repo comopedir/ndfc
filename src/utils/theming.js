@@ -152,6 +152,10 @@ export const themes = {
     ...themeColors.blond,
     img: imgLanches,
   },
+  ["Padaria"]: {
+    ...themeColors.blond,
+    img: imgLanches,
+  },
   ["Sanduíches"]: {
     ...themeColors.blond,
     img: imgLanches,
