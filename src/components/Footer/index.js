@@ -5,7 +5,12 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <p className={styles.contact}>@naodeixefecharaconta</p>
+        <a
+          href="https://www.instagram.com/naodeixefecharaconta"
+          className={styles.contact}
+        >
+          @naodeixefecharaconta
+        </a>
         <p className={styles.contact}>#naodeixefecharaconta</p>
       </div>
       <a
