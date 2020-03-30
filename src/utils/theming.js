@@ -52,6 +52,11 @@ const themeColors = {
     secondary: variables.colorMediumVermilion,
     tertiary: variables.colorKombuGreen,
   },
+  russianViolet: {
+    primary: variables.colorRussianViolet,
+    secondary: variables.colorPastelRed,
+    tertiary: variables.colorPalePink,
+  },
 }
 
 /* eslint-disable no-useless-computed-key */
@@ -65,31 +70,31 @@ export const themes = {
     img: imgFrutosDoMar,
   },
   ["Saudável"]: {
-    ...themeColors.peach,
+    ...themeColors.kombuGreen,
     img: imgSaudavel,
   },
   ["Asiática"]: {
-    ...themeColors.peach,
+    ...themeColors.flax,
     img: imgAsiatica,
   },
   ["Ingredientes"]: {
-    ...themeColors.palePink,
+    ...themeColors.peach,
     img: imgIngredientes,
   },
   ["Distribuidora"]: {
-    ...themeColors.palePink,
+    ...themeColors.peach,
     img: imgIngredientes,
   },
   ["Vegetariana"]: {
-    ...themeColors.peach,
+    ...themeColors.palePink,
     img: imgVegetariana,
   },
   ["Vegana"]: {
-    ...themeColors.peach,
+    ...themeColors.palePink,
     img: imgVegetariana,
   },
   ["Doces"]: {
-    ...themeColors.kenyanCopper,
+    ...themeColors.russianViolet,
     img: imgDoces,
   },
   ["Carnes"]: {
@@ -97,7 +102,7 @@ export const themes = {
     img: imgCarnes,
   },
   ["Pizza"]: {
-    ...themeColors.peach,
+    ...themeColors.flax,
     img: imgPizza,
   },
   ["Drinks"]: {
@@ -113,27 +118,27 @@ export const themes = {
     img: imgDrinks,
   },
   ["Brasileira"]: {
-    ...themeColors.mediumVermillion,
+    ...themeColors.russianViolet,
     img: imgTipica,
   },
   ["Árabe"]: {
-    ...themeColors.mediumVermillion,
+    ...themeColors.russianViolet,
     img: imgTipica,
   },
   ["Espanhola"]: {
-    ...themeColors.mediumVermillion,
+    ...themeColors.russianViolet,
     img: imgTipica,
   },
   ["Judaíca"]: {
-    ...themeColors.mediumVermillion,
+    ...themeColors.russianViolet,
     img: imgTipica,
   },
   ["Variada"]: {
-    ...themeColors.mediumVermillion,
+    ...themeColors.russianViolet,
     img: imgTipica,
   },
   ["Autoral"]: {
-    ...themeColors.mediumVermillion,
+    ...themeColors.russianViolet,
     img: imgTipica,
   },
   ["Mexicana"]: {
@@ -145,20 +150,20 @@ export const themes = {
     img: imgTodas,
   },
   ["Burgers"]: {
-    ...themeColors.mediumVermillion,
+    ...themeColors.blond,
     img: imgLanches,
   },
   ["Lanches"]: {
     ...themeColors.blond,
     img: imgLanches,
   },
-  ["Padaria"]: {
-    ...themeColors.kenyanCopper,
-    img: imgCafe,
-  },
   ["Sanduíches"]: {
     ...themeColors.blond,
     img: imgLanches,
+  },
+  ["Padaria"]: {
+    ...themeColors.kenyanCopper,
+    img: imgCafe,
   },
   ["Sorvetes"]: {
     ...themeColors.peach,
