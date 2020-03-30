@@ -30,6 +30,7 @@ const RestaurantPage = ({ pageContext }) => {
     Link_do_iFood: ifoodLink,
     Link_do_Rappi: rappiLink,
     Link_do_UberEats: uberEatsLink,
+    Doa__es: donations,
   } = data
 
   useTheme(categories[0])
@@ -68,6 +69,7 @@ const RestaurantPage = ({ pageContext }) => {
             ifoodLink={ifoodLink}
             uberEatsLink={uberEatsLink}
             rappiLink={rappiLink}
+            donations={donations}
           />
         </div>
       )}

@@ -39,6 +39,12 @@ const options = {
       <p>{website}</p>
     </>
   ),
+  donations: ({ url }) => (
+    <>
+      <p className={styles.label}>Doações</p>
+      <p>{url}</p>
+    </>
+  ),
 }
 
 const OptionButton = ({
@@ -88,6 +94,13 @@ const OptionButton = ({
       if (website) {
         contentProps = { website }
       }
+      break
+    case "Doações":
+      Content = options.donations
+      if (href) {
+        contentProps = { url: href }
+      }
+      className = styles.withBackground
       break
     default:
       break
