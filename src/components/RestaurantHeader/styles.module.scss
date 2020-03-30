@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  color: var(--tertiary-color);
+  color: var(--text-color);
 }
 
 .title {
@@ -33,6 +33,6 @@
 }
 
 .location {
-  color: var(--tertiary-color);
+  color: var(--text-color);
   text-decoration: underline;
 }

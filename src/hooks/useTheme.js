@@ -18,6 +18,14 @@ const useTheme = category => {
         "--tertiary-color",
         themeColors.tertiary
       )
+      root.document.documentElement.style.setProperty(
+        "--text-color",
+        themeColors.textColor
+      )
+      root.document.documentElement.style.setProperty(
+        "--text-on-accent-color",
+        themeColors.textOnAccent
+      )
     }
   }, [category, root])
 }
