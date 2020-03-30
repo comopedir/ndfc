@@ -45,6 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
               Link_do_iFood
               Link_do_Rappi
               Link_do_UberEats
+              Doa__es
             }
           }
         }
@@ -111,6 +112,7 @@ exports.createPages = ({ graphql, actions }) => {
                     Nome_do_Estabelecimento
                     Telefone_para_Pedidos
                     Categoria
+                    Doa__es
                     Como_Pedir
                     Servi_os
                     Foto_da_Comida {

@@ -46,6 +46,7 @@ a.button:hover {
   > p {
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   @include fromLarge {
