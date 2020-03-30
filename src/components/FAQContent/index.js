@@ -65,10 +65,11 @@ const FAQContent = () => {
               Renatão
             </a>
             ,{" "}
-            <a
-              href="https://www.instagram.com/victorbelinatti/"
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/salizzar/" target="_blank">
+              Pinheiro
+            </a>
+            ,{" "}
+            <a href="https://www.instagram.com/victorbelinatti/" target="_blank">
               Belinatti
             </a>
             ,{" "}
