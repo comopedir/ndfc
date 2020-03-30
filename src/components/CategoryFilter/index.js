@@ -15,7 +15,7 @@ const CategoryFilter = ({
 }) => {
   const selectedCategory = category || "Todos"
   const sortedCategories = useMemo(
-    () => alphabeticSortArray(categories.concat(["Todos"])),
+    () => ["Todos"].concat(alphabeticSortArray(categories)),
     [categories]
   )
 

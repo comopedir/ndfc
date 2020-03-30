@@ -10,6 +10,7 @@ const order = [
   "James Delivery",
   "Telefone",
   "Whatsapp",
+  "Doações",
   "Serviços",
   "DM no Instagram",
   "Website",
@@ -26,28 +27,35 @@ const RestaurantOptions = ({
   ifoodLink,
   rappiLink,
   uberEatsLink,
+  donations,
 }) => {
-  const optionsWithServices = useMemo(
-    () => (services.length ? options.concat(["Serviços"]) : options),
-    [options, services]
-  )
+  const updatedOptions = useMemo(() => {
+    let newOptions = options
+    if (donations) {
+      newOptions = newOptions.concat("Doações")
+    }
+
+    if (services.length) {
+      newOptions = newOptions.concat("Serviços")
+    }
+    return newOptions
+  }, [options, services, donations])
+
+  console.log(updatedOptions)
 
   // Add instagram based in info availability rather than tagged as an option
-  if (
-    instagram &&
-    !optionsWithServices.find(item => item === "DM no Instagram")
-  ) {
-    optionsWithServices.push("DM no Instagram")
+  if (instagram && !updatedOptions.find(item => item === "DM no Instagram")) {
+    updatedOptions.push("DM no Instagram")
   }
 
   // Add website based in info availability rather than tagged as an option
-  if (website && !optionsWithServices.find(item => item === "Website")) {
-    optionsWithServices.push("Website")
+  if (website && !updatedOptions.find(item => item === "Website")) {
+    updatedOptions.push("Website")
   }
 
   return (
     <div className={styles.container}>
-      {optionsWithServices
+      {updatedOptions
         .sort((a, b) => {
           if (order.indexOf(a) > order.indexOf(b)) {
             return 1
@@ -101,6 +109,9 @@ const RestaurantOptions = ({
               break
             case "James Delivery":
               href = "https://jamesdelivery.com.br/"
+              break
+            case "Doações":
+              href = donations
               break
             default:
               break
