@@ -2,6 +2,7 @@ import React, { useMemo } from "react"
 import styles from "./styles.module.scss"
 import Button from "./Button"
 import OptionButton from "./OptionButton"
+import normalizeUrl from "./../../utils/normalizeUrl"
 
 const order = [
   "iFood",
@@ -99,7 +100,7 @@ const RestaurantOptions = ({
               }
               break
             case "Website":
-              href = website
+              href = normalizeUrl(website)
               break
             case "Uber Eats":
               href =
@@ -111,7 +112,7 @@ const RestaurantOptions = ({
               href = "https://jamesdelivery.com.br/"
               break
             case "Doações":
-              href = donations
+              href = normalizeUrl(donations)
               break
             default:
               break
