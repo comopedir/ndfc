@@ -9,8 +9,8 @@
   height: 7.8rem;
   padding: 1.4rem;
   text-decoration: none;
-  color: var(--tertiary-color);
-  outline: 0.4rem solid var(--tertiary-color);
+  color: var(--text-color);
+  outline: 0.4rem solid var(--text-color);
   outline-offset: -0.4rem;
   display: flex;
   align-items: flex-end;
@@ -20,6 +20,7 @@
   &.withBackground {
     background-color: var(--secondary-color);
     outline: 0.4rem solid var(--secondary-color);
+    color: var(--text-on-accent-color);
   }
 
   @include fromLarge {
