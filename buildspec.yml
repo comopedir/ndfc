@@ -13,4 +13,7 @@ phases:
   post_build:
     commands:
       - aws s3 sync public s3://$S3_BUCKET --delete --acl public-read
-      # - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths "/*"
+      - |
+        if [[ $ENVIRONMENT != "production" ]] ; then
+          aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION --paths "/*"
+        fi
