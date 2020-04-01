@@ -19,7 +19,7 @@
     margin: 0;
     font-size: 3.5rem;
     line-height: 1.13;
-    color: var(--tertiary-color);
+    color: var(--text-color);
     font-family: "Playfair Display", serif;
     margin-top: -0.6rem;
     width: 20rem;
@@ -47,7 +47,7 @@
   font-family: Helvetica;
   font-size: 1.4rem;
   line-height: 1.4;
-  color: var(--tertiary-color);
+  color: var(--text-color);
   font-weight: 300;
   display: none;
 
@@ -70,7 +70,7 @@
 }
 
 .faqbutton {
-  color: var(--tertiary-color);
+  color: var(--text-color);
   font-family: Helvetica;
   font-size: 1.4rem;
   display: flex;
@@ -86,7 +86,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: var(--secondary-color);
+    color: var(--text-color);
   }
 
   height: 4.2rem;
@@ -102,7 +102,7 @@
 
 .button {
   background-color: var(--secondary-color);
-  color: $color-givry;
+  color: var(--text-on-accent-color);
   font-family: Helvetica;
   font-size: 1.4rem;
   display: flex;
@@ -118,7 +118,7 @@
   &:active,
   &:focus {
     background-color: var(--tertiary-color);
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   @include fromLarge {
@@ -147,7 +147,7 @@
 
 .mobileSignup {
   padding: 1.4rem;
-  stroke: $color-givry;
+  stroke: var(--text-on-accent-color);
 
   @include fromLarge {
     display: none;

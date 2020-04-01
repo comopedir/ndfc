@@ -42,8 +42,6 @@ const RestaurantOptions = ({
     return newOptions
   }, [options, services, donations])
 
-  console.log(updatedOptions)
-
   // Add instagram based in info availability rather than tagged as an option
   if (instagram && !updatedOptions.find(item => item === "DM no Instagram")) {
     updatedOptions.push("DM no Instagram")

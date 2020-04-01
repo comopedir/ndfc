@@ -39,6 +39,8 @@ $bp-large: 992px;
   --primary-color: #{$color-kombu-green};
   --secondary-color: #{$color-red-damask};
   --tertiary-color: #{$color-givry};
+  --text-color: #{$color-givry};
+  --text-on-accent-color: #{$color-givry};
 }
 
 :export {
