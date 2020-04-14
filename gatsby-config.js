@@ -4,10 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Não deixe fechar a conta`,
-    description: `Iniciativa aberta de apoio a restaurantes, mercados e produtores durante a crise COVID-19.`,
-    author: `@naodeixefecharaconta`,
-    url: `https://naodeixefecharaconta.com.br`,
+    title: `Como pedir`,
+    description: `Como pedir de todos os lugares que você gosta e quer ajudar.`,
+    author: `@comopedir`,
+    url: `https://comopedir.com.br`,
     image: `src/images/ndfac_ico.png`,
   },
   plugins: [

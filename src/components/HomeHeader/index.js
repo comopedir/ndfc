@@ -16,7 +16,7 @@ const HomeHeader = () => {
       </div>
 
       <div className="divHomeHeaderSubtitle">
-        Todas as formas de pedir dos seus lugares favoritos.
+        Como pedir de todos os lugares que você gosta e quer ajudar.
       </div>
       <div className="divHomeHeaderBottomContainer">
         <div className="divHomeHeaderPlace">
