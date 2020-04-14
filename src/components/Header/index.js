@@ -8,12 +8,10 @@ const Header = () => {
     <header className={styles.container}>
       <div className={styles.logo}>
         <h1>
-          <Link href="/">
-            não&nbsp;deixe fechar&nbsp;&nbsp;&nbsp; a&nbsp;conta.
-          </Link>
+          <Link href="/">Como Pedir...</Link>
         </h1>
         <p className={styles.subtitle}>
-          Todas as formas de pedir dos seus lugares favoritos.
+          Como pedir de todos os lugares que você gosta e quer ajudar.
         </p>
       </div>
       <div className={styles.menu}>
