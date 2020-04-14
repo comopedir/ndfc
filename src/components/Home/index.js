@@ -16,7 +16,7 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <SEO title="Não Deixe Fechar a Conta" theme={themes.home.primary} />
+      <SEO title="Como pedir" theme={themes.home.primary} />
       <RestaurantList
         restaurants={data}
         city={city}

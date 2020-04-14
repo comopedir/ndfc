@@ -6,12 +6,12 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <a
-          href="https://www.instagram.com/naodeixefecharaconta"
+          href="https://www.instagram.com/comopedir"
           className={styles.contact}
         >
-          @naodeixefecharaconta
+          @comopedir
         </a>
-        <p className={styles.contact}>#naodeixefecharaconta</p>
+        <p className={styles.contact}>#comopedir</p>
       </div>
       <div className={styles.content}>
         <a
