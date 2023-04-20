@@ -17,7 +17,7 @@
     "gatsby-plugin-react-helmet": "^3.1.24",
     "gatsby-plugin-s3": "^0.3.3",
     "gatsby-plugin-sass": "^2.2.1",
-    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-webfonts": "^1.1.2",
     "gatsby-source-airtable": "^2.1.0",
     "gatsby-source-filesystem": "^2.1.56",
